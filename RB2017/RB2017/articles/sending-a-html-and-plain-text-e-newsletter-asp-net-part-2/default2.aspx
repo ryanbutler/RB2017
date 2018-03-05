@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Sending an HTML and Plain Text E-newsletter with ASP.NET (ASPX), Part 2" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.sending_a_html_and_plain_text_e_newsletter_asp_net_part_2.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Sending an HTML and Plain Text E-newsletter with ASP.NET (ASPX), Part 2</h2>
 <h3>Writing the connection object</h3>
 <p>Since you need to send the emails from a query, you first need to add the code to connect to your database. Start by adding that code right below where your SMTP object sets your host as shown below:</p>

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Sending an HTML and Plain Text E-newsletter with ASP.NET (ASPX), Part 2" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.sending_a_html_and_plain_text_e_newsletter_asp_net_part_2._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Sending an HTML and Plain Text E-newsletter with ASP.NET (ASPX), Part 2</h2>
 <p>In my previous article, <a href="../sending-a-html-and-plain-text-e-newsletter-asp-net/default.aspx">Sending an HTML and Plain Text E-newsletter with ASP.NET</a>, I discussed the steps involved in creating an ASP.NET page capable of sending a HTML or plain text email to a specified recipient. Furthermore, I demonstrated the Ajax toolset for preventing an email from being sent to the specified recipient more than once.</p>
 <p>Now, it would be nice to re-engineer this page to send an email to multiple recipients when they click the submit button. In order to do this, you'll need a repository such as a database to store recipients' email addresses, and then you can use SQL queries to determine when to send the emails.</p>

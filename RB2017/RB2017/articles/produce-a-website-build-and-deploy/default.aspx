@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Building and Deploying a ASP.NET (ASPX) website to production" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.produce_a_website_build_and_deploy._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Building and Deploying a ASP.NET (ASPX) website to production</h2>
 <p>Developing and troubleshooting an ASP.NET  website can be fun and exciting. You’re generally learning new concepts, discovering and resolving issues, and driving your objectives to a successful website. When it comes time to deploy the website to a production server, often times the fun and excitement becomes a frustrating, time consuming and tedious exercise.</p>
 <p>Reason for this are many including: (1) The development machine has all the necessary files needed to make the website work, however, isolating these files and publishing to a server can be trying the first few times, (2) Finding the right host for your website - if you’re working solely with Microsoft .NET, a Windows host that supports the current version is a requirement.</p>

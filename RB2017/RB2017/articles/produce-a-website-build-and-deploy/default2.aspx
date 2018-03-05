@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Building and Deploying a ASP.NET (ASPX) website to production" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.produce_a_website_build_and_deploy.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Building and Deploying a ASP.NET (ASPX) website to production</h2>
 <h3>Creating a release profile</h3>
 <p>Once we have compiled our solution the next step is to create a release profile for use in publishing our application. Follow these steps:</p>

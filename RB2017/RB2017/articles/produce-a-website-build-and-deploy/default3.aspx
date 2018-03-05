@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Building and Deploying a ASP.NET (ASPX) website to production" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default3.aspx.cs" Inherits="RB2017.produce_a_website_build_and_deploy.default3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Building and Deploying a ASP.NET (ASPX) website to production</h2>
 <h3>Publishing production files to output path</h3>
 <p>Since we have built our solution in release mode, and created a release profile, our last item is to publish our files to the correct output path. Follow these steps:</p>

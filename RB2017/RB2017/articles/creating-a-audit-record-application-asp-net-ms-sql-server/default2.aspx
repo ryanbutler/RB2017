@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating an Audit Record Application with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.creating_a_audit_record_application_asp_net_ms_sql_server.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating an Audit Record Application with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Writing View Employee Functionality</h3>
 <p>Before an audit can occur, we need the ability to view specific employee records. We will view and record audits from the same page, recordaudit.aspx, but separate the implementation. Let's tackle the view functionality first. From the solution explorer, do the following:</p>

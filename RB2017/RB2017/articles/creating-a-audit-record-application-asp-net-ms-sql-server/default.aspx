@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating an Audit Record Application with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.creating_a_audit_record_application_asp_net_ms_sql_server._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating an Audit Record Application with ASP.NET (ASPX) and MS SQL Server</h2>
 <p>Often times in development, you need the ability to store audit transactions within an application. Reasons for this are varied and include: health care related applications use it to determine who viewed patient data, which help the product meet government regulations. When businesses use applications that have multiple users updating, recording or deleting sensitive information generally want auditing procedures in place to prevent fraud or inaccurate information from entering the system. Bank applications use it to audit balances recorded by accountants. Obviously, having the ability to keep audits of these transactions becomes very helpful over the course of time.</p>
 <p>In the following article, we'll learn how to implement audit recording through an ASP.NET application. Specifically, we'll learn: how to effectively record the audit from a table in SQL, how to record the date and time, as well as the user who audited the information. If you would like to learn how to create and implement an application such as this, please do follow along.</p>

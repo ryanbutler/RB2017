@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Sending a HTML & Plain Text E-Newsletter in ASP.NET (ASPX)" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.sending_a_html_and_plain_text_e_newsletter_asp_net.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Sending a HTML & Plain Text E-Newsletter in ASP.NET (ASPX)</h2>
 <h3>Adding the HTML markup to our bodyHTML variable</h3>
 <p>To put the HTML markup of our finished page into our variable, we set our variable to accept a literal (verbatim) string as shown below:</p>

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Sending a HTML & Plain Text E-Newsletter in ASP.NET (ASPX)" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default3.aspx.cs" Inherits="RB2017.articles.sending_a_html_and_plain_text_e_newsletter_asp_net.default3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Sending a HTML & Plain Text E-Newsletter in ASP.NET (ASPX)</h2>
 <h3>Providing a web version of the email</h3>
 <p>One additional detail you can do for users who have difficulty reading the html version in their email client, is to provide a link at the top of the newsletter that will point readers to a web version of the newsletter for easier viewing. If you want to implement this, view default_webversion.aspx.</p>

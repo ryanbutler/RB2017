@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Cascading Style Sheet Print Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.creating_a_cascading_style_sheet_page._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Cascading Style Sheet Print Page</h2>
 <p>Today’s web sites implore many different aspects including standards-compliant markup, advanced CSS techniques, and mobile functionality. Often times the need for printer - friendliness is misplaced, although it’s a must. If you design your site with HTML 5 and CSS, designing a separate print style sheet is relatively easy. In this article I’ll show you how to make your web site look great visually and produce great-looking print output as well.</p>
 <p class="alignCenter"><a href="examples/index_finished.html" target="_blank">See Demo</a> </p>

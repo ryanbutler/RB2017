@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a ASP.NET Contact Form (ASPX)" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.creating_a_asp_net_contact_form.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a ASP.NET Contact Form (ASPX)</h2>
 <h3>Open the Web site in a browser</h3>
 <p>In order to see the results of our work, open your preferred web browser and navigate to a live website, such as http://www.&lt;yourwebsite&gt;.com/contact.aspx 

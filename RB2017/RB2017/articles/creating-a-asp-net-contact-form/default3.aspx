@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a ASP.NET Contact Form (ASPX)" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default3.aspx.cs" Inherits="RB2017.articles.creating_a_asp_net_contact_form.default3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a ASP.NET Contact Form (ASPX)</h2>
 <h3>Setting the email recipient of our mail object</h3>
 <p>For our clients to reach us, we need to send the email result to a specified recipient. We do this by adding the following code as shown below:</p>

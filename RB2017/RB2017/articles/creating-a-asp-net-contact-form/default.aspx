@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a ASP.NET Contact Form (ASPX)" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.creating_a_asp_net_contact_form._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a ASP.NET Contact Form (ASPX)</h2>
 <p>When developing a website for business, personal or organizational use, having a reliable, secure and intuitive way of ascertaining information from your visitors to better meet their needs, creating and developing a contact form is essential. Creating a form allows website owners to ask for specific information from the visitor in an effort to respond back to them in a way that seems meaningful and useful. However, if precautions are not taken, creating these forms can lead to abuse, misuse and incorrect information getting back to the business, person or organization, and in most cases, leading to a mess of unsolicited electronic mail that wreaks havoc on email systems.
 </p>

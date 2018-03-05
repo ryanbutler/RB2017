@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a ASP.NET Contact Form (ASPX)" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default4.aspx.cs" Inherits="RB2017.articles.creating_a_asp_net_contact_form.default4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a ASP.NET Contact Form (ASPX)</h2>
 <h3>Creating required fields in ASP.NET</h3>
 <p>Generally, in PHP and ASP, you create a separate JavaScript file that contains functions to check fields for empty values. Then, within your page, usually at the top, you would provide server-side validation to ensure those same fields do in fact contain a value. In essence, you have two files. In the ASP.NET environment, they made this process much easier and a bit more intuitive. When Microsoft created ASP.NET, they decided to package it with an additional set of controls that are effectively grouped together in a set of validation controls. Out of this group and arguably the easiest to use are required field validators, which do exactly what they are called: they require that certain fields are filled in before allowing the form to submit, more importantly however, they produce the JavaScript automatically for us. Let's go back to contact.aspx and modify our code as shown below:</p>

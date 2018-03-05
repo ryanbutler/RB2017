@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Create an E-newsletter Signup System with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.creating_a_e_newsletter_signup_system_asp_net_ms_sql_server.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Create an E-newsletter Signup System with ASP.NET (ASPX) and MS SQL Server</h2>
 <p>I've created labels and server-side controls for the information you need. To achieve a tabular look, add the following CSS:</p>
 <pre><code>

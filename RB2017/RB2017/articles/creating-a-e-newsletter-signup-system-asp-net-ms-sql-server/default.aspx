@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Create an E-newsletter Signup System with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.creating_a_e_newsletter_signup_system_asp_net_ms_sql_server._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Create an E-newsletter Signup System with ASP.NET (ASPX) and MS SQL Server</h2>
 <p>Creating a custom e-newsletter with common languages such as HTML, CSS, ASP.NET, and SQL Server is great, but it leaves out a key piece: allowing users to enter their information and decide whether they want to receive these newsletters. Using the steps I laid out in my previous two articles on Sending an HTML and Plain Text E-newsletter with ASP.NET, Part 2, you would have to manually enter all recipients that wanted to receive these newsletters, which is tedious and painful.</p>
 <p>A better alternative is to create a user interface that collects basic user information such as first and last names and e-mail addresses, and presents a check box that lets users decide whether they want to sign up for periodic newsletters. You can also add personalization, formatting the introduction to reads as if the newsletter is intended for a specific individual, even though you send it to hundreds.</p>

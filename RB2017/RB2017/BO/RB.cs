@@ -21,6 +21,10 @@ namespace RB2017
 			List<RB> articles = new List<RB>();
 			try
 			{
+                RB r = new RB();
+                r.Id = 0;
+                r.Article_Name = "---select one---";
+                articles.Add(r);
 				conn.Open();
 				SqlDataReader rdr = cmd.ExecuteReader();
 				while (rdr.Read())

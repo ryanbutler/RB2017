@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Human Resources Application with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.creating_a_human_resources_application_asp_net_ms_sql_server._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Human Resources Application with ASP.NET (ASPX) and MS SQL Server</h2>
 <p>Most companies post their job openings on an internal intranet, as well as on outside job sites such as CareerBuilder or Indeed. However, the need for a company to post their jobs to their internal intranet promptly and efficiently presents a significant challenge. How do you allow non-technical personnel with no HTML skills to post new jobs to the intranet? How do you distinguish between active listings (that is, for jobs with an immediate need) and those that will not be active for another few weeks but need to be entered by the human resources (HR) department?</p>
 <p>There are a few options, including migrating the entire company's website into a content management system. This way, non-technical personnel can create new job listings without the hassle of learning new technologies. </p>

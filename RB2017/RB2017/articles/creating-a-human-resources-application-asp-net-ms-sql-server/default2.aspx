@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Human Resources Application with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.creating_a_human_resources_application_asp_net_ms_sql_server.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Human Resources Application with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Calling Add Job Method</h3>
 <p>Since you have written the add job functionality, let's add the ability to call it. From the solution explorer, follow these steps:</p>

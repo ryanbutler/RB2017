@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default6.aspx.cs" Inherits="RB2017.articles.creating_a_web_based_schedule_asp_net_ms_sql_server.default6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Open default.aspx.cs</h3>
 <p>Since we need to associate our list object to our grid view, we'll create another list object, call our method, and take the objects we get from that method and data bind to that. Let's first open our code behind file by following these steps:</p>

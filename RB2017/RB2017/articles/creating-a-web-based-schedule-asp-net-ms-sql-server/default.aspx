@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.creating_a_web_based_schedule_asp_net_ms_sql_server._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server</h2>
 <p>Community colleges and universities across the country and around the world are increasingly using their website as way to reach their students. As more students enroll, the demand for more dynamic applications including application for admission, contact forms, and registration for events becomes important. Another aspect for these websites that has become popular is the ability to show a Web-based schedule of classes. Within this schedule, they normally provide complete information about each class, including whether the class is full, or maybe whether it has a lab component.
 </p>

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default5.aspx.cs" Inherits="RB2017.articles.creating_a_web_based_schedule_asp_net_ms_sql_server.default5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Create Class File</h3>
 <p>We have two options for getting data bound to our grid view: (1) put all the database and business logic in our default.aspx.cs file, or (2) create a separate class file, put all the database and business logic in this file, and then bind to the list object it returns in our default.aspx.cs file. Our second option is the best, it creates a layer of abstraction to our application, and if it's ever needed, we could compile that class as a namespace and allow another developer to use it. As a result, we'll go with the second option. Follow these steps to create our class file:</p>

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default3.aspx.cs" Inherits="RB2017.articles.creating_a_web_based_schedule_asp_net_ms_sql_server.default3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Populating Tables</h3>
 <p>Let's go ahead and populate our tables with some data by following these steps:</p>

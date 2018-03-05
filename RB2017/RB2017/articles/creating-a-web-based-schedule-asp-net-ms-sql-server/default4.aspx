@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default4.aspx.cs" Inherits="RB2017.articles.creating_a_web_based_schedule_asp_net_ms_sql_server.default4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Create Stored Procedure</h3>
 <p>Stored procedures in databases can be thought of as blocks of SQL code that have been executed against the database. This is great for multiple reasons including:</p>

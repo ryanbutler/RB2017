@@ -1,0 +1,15 @@
+﻿body 
+{
+	font-family:Arial, Helvetica, Sans-Serif;
+	font-size:.85em;
+}
+label
+{
+	float:left;
+	width:200px;
+}
+div.row
+{
+	width:500px;
+	margin:4px auto;
+}

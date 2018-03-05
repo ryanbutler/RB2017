@@ -1,0 +1,1025 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7AE5CCF-E07A-44D5-8775-170BEE50EE7E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RB2017</RootNamespace>
+    <AssemblyName>RB2017</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\add-article.aspx" />
+    <Content Include="admin\DA\spViewArticle.sql" />
+    <Content Include="admin\default.aspx" />
+    <Content Include="admin\edit-article.aspx" />
+    <Content Include="admin\view-article.aspx" />
+    <Content Include="articles\creating-a-asp-net-contact-form\default2.aspx" />
+    <Content Include="articles\creating-a-asp-net-contact-form\default3.aspx" />
+    <Content Include="articles\creating-a-asp-net-contact-form\default4.aspx" />
+    <Content Include="articles\creating-a-asp-net-contact-form\images\client-server.gif" />
+    <Content Include="articles\creating-a-asp-net-contact-form\images\validation.jpg" />
+    <Content Include="articles\creating-a-asp-net-contact-form\images\view-source.jpg" />
+    <Content Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\default.aspx" />
+    <Content Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\default2.aspx" />
+    <Content Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig1.jpg" />
+    <Content Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig2.jpg" />
+    <Content Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig4.gif" />
+    <Content Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig5.gif" />
+    <Content Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\images\restore_2.jpg" />
+    <Content Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\images\restore_from_device.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\default.aspx" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\index.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\index_body.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\index_copyright.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\index_finished.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\index_heading.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\index_logo.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\index_navigation.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\print.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\print_body.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\print_copyright.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\print_finished.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\print_heading.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\print_logo.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\print_navigation.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\style.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\style_finished.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\examples\style_youarehere.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\images\1.png" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\images\2.png" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\images\3.png" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\images\background.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\images\footer.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\images\header.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\images\header_print.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\images\wrapper.jpg" />
+    <Content Include="articles\asynchronous-javascript-and-xml\default.aspx" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\default.aspx" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\default2.aspx" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\default3.aspx" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\default4.aspx" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\default5.aspx" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\1.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\10.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\11.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\12.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\13.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\14.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\15.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\16.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\17.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\18.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\19.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\2.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\20.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\21.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\22.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\3.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\4.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\5.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\6.1.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\6.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\7.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\8.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\razor1.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\razor2.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\razor3.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\razor4.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\razor5.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\razor6.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\images\razor7.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\1.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\10.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\11.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\12.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\13.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\14.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\15.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\16.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\17.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\18.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\19.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\2.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\20.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\21.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\22.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\3.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\4.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\5.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\6.1.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\6.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\7.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\8.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\9.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\razor1.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\razor2.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\razor3.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\razor4.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\razor5.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\razor6.png" />
+    <Content Include="articles\creating-a-asp-mvc-contact-form\thumbs\razor7.png" />
+    <Content Include="articles\creating-a-asp-net-contact-form\default.aspx" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\default.aspx" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\default2.aspx" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\default3.aspx" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\default4.aspx" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_body.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_clear.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_copyright.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_copyrightlink.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_finished.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_float.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_formatheadings.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_header.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_paragraphs.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_ulbullets.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_ulindentation.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_ullinkbutton.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_ullinkbuttonstates.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_wrapper.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\index_youarehere.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_body.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_clear.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_copyright.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_copyrightlink.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_finished.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_float.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_formatheadings.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_header.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_paragraphs.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_ulbullets.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_ulindentation.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_ullinkbutton.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_ullinkbuttonstates.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_wrapper.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\examples\style_youarehere.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\260ruler.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\background.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\backgroundfill.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\carpentershand.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\footer.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\harddash.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\header.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\headerslice.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\linetool.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\mesh.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\newdocument.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\optimize.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\rectangletool.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\slicetool.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\spacer.gif" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\stroke.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\strokecategory.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\twocolumn.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\images\wrapper.jpg" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\default.aspx" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\index.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\index_body.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\index_bullets.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\index_css3.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\index_finished.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\index_label.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\index_row.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\index_textarea.html" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\style.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\style_body.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\style_bullets.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\style_css3.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\style_finished.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\style_label.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\style_row.css" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\examples\style_textarea.css" />
+    <Content Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default.aspx" />
+    <Content Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default2.aspx" />
+    <Content Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default3.aspx" />
+    <Content Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\images\column_properties.jpg" />
+    <Content Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\images\insert_column.jpg" />
+    <Content Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\images\new_item.jpg" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default.aspx" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default2.aspx" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default3.aspx" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default4.aspx" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default5.aspx" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default6.aspx" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\AddTableWindow.jpg" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\ClickPlusSign.jpg" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\DebuggingNotEnabled.jpg" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\HelpDeskRelationships.jpg" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\IDSpec2Yes.gif" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\NewDatabaseDiagram.jpg" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\Parents.gif" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\Parents_Children.gif" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\SelectNewDatabase.jpg" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\SelectNewTable.jpg" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\SetPrimaryKey.gif" />
+    <Content Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\images\StatusID_HelpDesk.jpg" />
+    <Content Include="articles\creating-a-html-web-page\default.aspx" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\default.aspx" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\default2.aspx" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig1.jpg" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig2.jpg" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig4.gif" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig5.gif" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig6.jpg" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\images\HR_ASP.NET_1.jpg" />
+    <Content Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\images\HR_ASP.NET_2.jpg" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default.aspx" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default2.aspx" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default3.aspx" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default4.aspx" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\images\RegConfSys_ASP.NET_Fig1.PNG" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\images\RegConfSys_ASP.NET_Fig2.png" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\images\RegConfSys_ASP.NET_Fig3.png" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\images\RegConfSys_ASP.NET_Fig4.png" />
+    <Content Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\images\RegConfSys_ASP.NET_Fig5.png" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default.aspx" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default2.aspx" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default3.aspx" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default4.aspx" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig1.jpg" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig2.jpg" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig4.gif" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig5.gif" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig6.jpg" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig7.jpg" />
+    <Content Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\images\EmployeeDirectoryASP.NET_Fig8.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default.aspx" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default2.aspx" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default3.aspx" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default4.aspx" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default5.aspx" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default6.aspx" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig1.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig10.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig11.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig12.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig13.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig14.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig2.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig3.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig4.gif" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig5.gif" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig6.gif" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig7.gif" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig8.jpg" />
+    <Content Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\images\ClassSchedule_ASP.NET_Fig9.jpg" />
+    <Content Include="articles\introduction-to-css\default.aspx" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\default.aspx" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\default2.aspx" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\images\DBServerListed.jpg" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\images\IdentitySpecificationNode.jpg" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\images\NewDBWindow.jpg" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\images\NewTableWindow.jpg" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\images\SSMgtStudio_ServerConnex.jpg" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\images\Yes4%28Is_Identity%29.jpg" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default.aspx" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default2.aspx" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default3.aspx" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\images\debug_visual_studio.jpg" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\images\sendemail_browser_success.jpg" />
+    <Content Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\images\sendemail_browser_view.jpg" />
+    <Content Include="DA\spContactFormViewArticleList.sql" />
+    <Content Include="admin\DA\spInsertArticleName.sql" />
+    <Content Include="images\close.png" />
+    <Content Include="images\content-bg7.png" />
+    <Content Include="images\left-stripes.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\next.png" />
+    <Content Include="images\prev.png" />
+    <Content Include="images\site-sprites.png" />
+    <Content Include="images\tab-hover.png" />
+    <Content Include="images\ui.totop.png" />
+    <Content Include="listings.aspx" />
+    <Content Include="articles\produce-a-website-build-and-deploy\default.aspx" />
+    <Content Include="articles\produce-a-website-build-and-deploy\default2.aspx" />
+    <Content Include="articles\produce-a-website-build-and-deploy\default3.aspx" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\build.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\build_configuration.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\build_general_optimize_code.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\build_output_output_path.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\expand_dev.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\expand_rb2015.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\publish.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\publish_file_system.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\publish_profile_new.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\publish_remove_existing_files.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\publish_target_location.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\publish_type_name.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\release_files.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\release_mode.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\root_solution.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\solution_properties.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\images\tab_application.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\build_configuration.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\build_general_optimize_code.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\build_output_output_path.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\publish.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\publish_file_system.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\publish_profile_new.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\publish_remove_existing_files.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\publish_type_name.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\release_files.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\release_mode.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\solution_properties.jpg" />
+    <Content Include="articles\produce-a-website-build-and-deploy\thumbs\tab_application.jpg" />
+    <Content Include="contact.aspx" />
+    <Content Include="images\footer-bg-glow.png" />
+    <Content Include="images\header-bg-glow.png" />
+    <Content Include="images\hr-sections.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\me2015.jpg" />
+    <Content Include="resume.aspx" />
+    <Content Include="scripts\contact.js" />
+    <Content Include="scripts\easing.js" />
+    <Content Include="scripts\focus.js" />
+    <Content Include="scripts\google.js" />
+    <Content Include="scripts\highlight.pack.js" />
+    <Content Include="scripts\jquery-2.1.4.min.js" />
+    <Content Include="scripts\jquery.ui.totop.js" />
+    <Content Include="scripts\lightbox.js" />
+    <Content Include="scripts\uitotophelper.js" />
+    <Content Include="styles\highlighter\default.css" />
+    <Content Include="styles\lightbox.css" />
+    <Content Include="default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="documents\resume_web.pdf" />
+    <Content Include="articles\creating-a-cascading-style-sheet-layout\CSSLayout.zip" />
+    <Content Include="articles\creating-a-cascading-style-sheet-web-form\StyleForm.zip" />
+    <Content Include="articles\creating-a-cascading-style-sheet-print-page\CSSPrint.zip" />
+    <Content Include="Bundle.config" />
+    <Content Include="documents\resume_web.docx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\respond.js" />
+    <Content Include="scripts\respond.min.js" />
+    <Content Include="scripts\WebForms\DetailsView.js" />
+    <Content Include="scripts\WebForms\Focus.js" />
+    <Content Include="scripts\WebForms\GridView.js" />
+    <Content Include="scripts\WebForms\Menu.js" />
+    <Content Include="scripts\WebForms\MenuStandards.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="scripts\WebForms\SmartNav.js" />
+    <Content Include="scripts\WebForms\TreeView.js" />
+    <Content Include="scripts\WebForms\WebForms.js" />
+    <Content Include="scripts\WebForms\WebParts.js" />
+    <Content Include="scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="styles\skeleton.css" />
+    <Content Include="styles\styles.css" />
+    <Content Include="styles\ui.totop.css" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\add-article.aspx.cs">
+      <DependentUpon>add-article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-article.aspx.designer.cs">
+      <DependentUpon>add-article.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\BO\Article.cs" />
+    <Compile Include="admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\edit-article.aspx.cs">
+      <DependentUpon>edit-article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\edit-article.aspx.designer.cs">
+      <DependentUpon>edit-article.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view-article.aspx.cs">
+      <DependentUpon>view-article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view-article.aspx.designer.cs">
+      <DependentUpon>view-article.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="articles\creating-a-asp-net-contact-form\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-net-contact-form\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-net-contact-form\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-net-contact-form\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-net-contact-form\default4.aspx.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-net-contact-form\default4.aspx.designer.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-audit-record-application-asp-net-ms-sql-server\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-print-page\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-print-page\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\asynchronous-javascript-and-xml\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\asynchronous-javascript-and-xml\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default4.aspx.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default4.aspx.designer.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default5.aspx.cs">
+      <DependentUpon>default5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-mvc-contact-form\default5.aspx.designer.cs">
+      <DependentUpon>default5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-net-contact-form\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-asp-net-contact-form\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-layout\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-layout\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-layout\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-layout\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-layout\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-layout\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-layout\default4.aspx.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-layout\default4.aspx.designer.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-web-form\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-cascading-style-sheet-web-form\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-e-newsletter-signup-system-asp-net-ms-sql-server\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default4.aspx.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default4.aspx.designer.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default5.aspx.cs">
+      <DependentUpon>default5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default5.aspx.designer.cs">
+      <DependentUpon>default5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default6.aspx.cs">
+      <DependentUpon>default6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-help-desk-web-application-asp-net-ms-sql-server\default6.aspx.designer.cs">
+      <DependentUpon>default6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-html-web-page\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-html-web-page\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-human-resources-application-asp-net-ms-sql-server\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default4.aspx.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-registration-and-confirmation-system-asp-net-ms-sql-server\default4.aspx.designer.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default4.aspx.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-searchable-online-employee-directory-asp-net-ms-sql-server\default4.aspx.designer.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default4.aspx.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default4.aspx.designer.cs">
+      <DependentUpon>default4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default5.aspx.cs">
+      <DependentUpon>default5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default5.aspx.designer.cs">
+      <DependentUpon>default5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default6.aspx.cs">
+      <DependentUpon>default6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\creating-a-web-based-schedule-asp-net-ms-sql-server\default6.aspx.designer.cs">
+      <DependentUpon>default6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\introduction-to-css\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\introduction-to-css\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net-part-2\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\sending-a-html-and-plain-text-e-newsletter-asp-net\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listings.aspx.cs">
+      <DependentUpon>listings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listings.aspx.designer.cs">
+      <DependentUpon>listings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\produce-a-website-build-and-deploy\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\produce-a-website-build-and-deploy\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\produce-a-website-build-and-deploy\default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\produce-a-website-build-and-deploy\default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles\produce-a-website-build-and-deploy\default3.aspx.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\produce-a-website-build-and-deploy\default3.aspx.designer.cs">
+      <DependentUpon>default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BO\RB.cs" />
+    <Compile Include="resume.aspx.cs">
+      <DependentUpon>resume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resume.aspx.designer.cs">
+      <DependentUpon>resume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62485</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62485/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

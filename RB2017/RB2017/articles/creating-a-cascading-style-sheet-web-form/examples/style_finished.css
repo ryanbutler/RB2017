@@ -1,0 +1,25 @@
+﻿body 
+{
+	font-family:Arial, Helvetica, Sans-Serif;
+	font-size:.85em;
+}
+label
+{
+	float:left;
+	width:200px;
+}
+div.row
+{
+	width:500px;
+	margin:4px auto;
+}
+ul li
+{
+	list-style-type:none;
+	margin-left:160px;
+}
+textarea
+{
+	width:200px;
+	height:100px;
+}

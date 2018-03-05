@@ -1,0 +1,21 @@
+﻿body 
+{
+    font-family:'Times New Roman';
+    color:#000;
+}
+img.noprint
+{
+    display:none;
+}
+nav
+{
+    display:none;
+}
+h2
+{
+    font-size:16pt;    
+}
+h3
+{
+    font-size:13pt;
+}

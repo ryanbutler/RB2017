@@ -1,0 +1,10 @@
+﻿body 
+{
+	font-family:Arial, Helvetica, Sans-Serif;
+	font-size:.85em;
+}
+div.row
+{
+	width:500px;
+	margin:4px auto;
+}

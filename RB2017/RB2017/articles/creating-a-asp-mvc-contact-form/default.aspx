@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a ASP.NET MVC Contact Form" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.creating_a_asp_mvc_contact_form._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a ASP.NET MVC Contact Form</h2>
 <p>Over the last few years, Microsoft’s investment in transforming Active Server Pages from a basic scripting language into an object oriented language with .NET integration has been remarkable. Some noteworthy features in traditional web forms are the ability to maintain page state on a page refresh, the ability to bind (associate) data to a standard set of web controls, and separation of code between a web form and code-behind.</p>
 <p>Microsoft has invested resources lately into transforming traditional ASP.NET web forms into a new paradigm. ASP MVC (Model View Controller) is the new programming model that developers use, and it provides:</p>

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a ASP.NET MVC Contact Form" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.creating_a_asp_mvc_contact_form.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a ASP.NET MVC Contact Form</h2>
 <h3>Adjusting our contact view</h3>
 <p>

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Searchable Online Employee Directory with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.creating_a_searchable_online_employee_directory_asp_net_ms_sql_server.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Searchable Online Employee Directory with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Implement Search Functionality</h3>
 <p>Our search functionality works as follows: a visitor will type a last name or a letter of a last name in our search field. They click submit, we pass in the value they enter, issue a query against it, and if we find a match or matches, we'll display the employee last and first name as a hyperlink. If no matches are found, we display our placeholder that has the no records exist message. We could put all this logic in our code-behind file, but that's not recommended. Instead, let's create a class file to handle the data access.</p>

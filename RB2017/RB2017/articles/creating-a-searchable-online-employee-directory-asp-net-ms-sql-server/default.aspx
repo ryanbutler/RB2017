@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Searchable Online Employee Directory with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.creating_a_searchable_online_employee_directory_asp_net_ms_sql_server._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Searchable Online Employee Directory with ASP.NET (ASPX) and MS SQL Server</h2>
 <p>When working for a large company, it's hard to know everyone's name, job title, room location and contact information such as phone number or email address. Most companies rely on a spreadsheet of employee names that becomes outdated as soon as the sheet is printed. Most solutions to this problem rely on a Web-based approach. One solution could be posting a PDF file or Excel file to an internal intranet, but the same maintenance pain point exist: every time a change is needed, you have to re-upload the document.</p>
 <p>A solution that is more flexible and robust to changes is a Web page that's capable of searching a database of employee names. When an employee is found, his or her name is displayed in a hyperlink that provides further information when clicked. As a developer, if you're familiar with ASP.NET and database-driven pages, this solution is quite simple to implement.</p>

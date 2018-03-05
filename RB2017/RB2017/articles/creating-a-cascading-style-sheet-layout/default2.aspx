@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Cascading Style Sheet Layout" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.creating_a_cascading_stylesheet_layout.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Cascading Style Sheet Layout</h2>
 <h3>Analyzing  our layout</h3>
 <p> From  creating our Fireworks document, we arrive at the following structural  requirements for our web page:</p>

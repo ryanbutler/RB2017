@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Cascading Style Sheet Layout" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.creating_a_cascading_stylesheet_layout._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Cascading Style Sheet Layout</h2>
 <p>Creating and developing a website with CSS is generally a straightforward task.
 It gives you significant advantages structurally since you’re not embedding presentational markup in your page. It also provides advantages on the presentation side because you can control

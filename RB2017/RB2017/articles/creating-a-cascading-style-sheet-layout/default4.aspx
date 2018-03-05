@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Cascading Style Sheet Layout" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default4.aspx.cs" Inherits="RB2017.creating_a_cascading_stylesheet_layout.default4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Cascading Style Sheet Layout</h2>
 <h3>Formatting  our menu</h3>
 <p> We  have definitely saved the best part for last, styling our menu to simulate  button behavior. We need to do the following:</p>

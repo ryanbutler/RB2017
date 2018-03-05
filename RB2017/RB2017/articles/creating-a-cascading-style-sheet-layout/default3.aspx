@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Cascading Style Sheet Layout" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default3.aspx.cs" Inherits="RB2017.creating_a_cascading_stylesheet_layout.default3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Cascading Style Sheet Layout</h2>
 <h3>Box Model  Calculation</h3>
 <p> According  to the W3C, a box&rsquo;s true width is its declared width plus borders and padding. In our example, our mathematical calculation can be expressed as follows:</p>

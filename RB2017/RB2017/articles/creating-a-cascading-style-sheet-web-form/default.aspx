@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Cascading Style Sheet Web Form" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.creating_a_cascading_style_sheet_web_form._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Cascading Style Sheet Web Form</h2>
 <p>
 When creating web forms, there generally two ways to control the layout: (1) Using tables, or (2)

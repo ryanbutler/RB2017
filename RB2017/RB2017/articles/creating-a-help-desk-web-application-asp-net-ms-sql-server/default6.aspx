@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default6.aspx.cs" Inherits="RB2017.articles.creating_a_help_desk_web_application_asp_net_ms_sql_server.default6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Creating the Help Desk Class</h3>
 <p>Now that we have our data coming in, we need to be able to record a help desk ticket submission. We need to create an event handler in a class to handle it. Let's first create a help desk class by doing the following:

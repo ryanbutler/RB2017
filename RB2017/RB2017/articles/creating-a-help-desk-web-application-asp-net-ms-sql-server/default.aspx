@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.creating_a_help_desk_web_application_asp_net_ms_sql_server._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server</h2>
 <p>Suppose you work for a small to midsize company that employs 50-100 workers. The Help Desk -- a subsidiary of the Information Services Division -- is in charge of trouble tickets regarding general PC issues such as email, viruses, network issues, etc. Initially, the Help Desk team stored this information in Excel spreadsheets, but as the company has grown, managing these spreadsheets has become tedious and time consuming.</p>
 <p>The Help Desk has asked you to devise a more efficient solution that could be developed internally, saving the company money. As you start to think about it, the following requirements are apparent: fields for the submitter's first and last name, as well as their email address. You'll also need combo boxes for indicating ticket severity (low, medium, high), department, status (new, open, resolved), employee working on the issue, as well as an area for comments. Of all the solutions available, creating an internal help desk Web application with ASP.NET is relatively simple.</p>

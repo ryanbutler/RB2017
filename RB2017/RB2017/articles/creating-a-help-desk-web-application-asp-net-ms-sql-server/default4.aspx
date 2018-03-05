@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default4.aspx.cs" Inherits="RB2017.articles.creating_a_help_desk_web_application_asp_net_ms_sql_server.default4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Filling the Dropdown Lists</h3>
 <p>Currently, the dropdown list(s) are not populated with data from our database table(s). We have a few different approaches we can take:</p>

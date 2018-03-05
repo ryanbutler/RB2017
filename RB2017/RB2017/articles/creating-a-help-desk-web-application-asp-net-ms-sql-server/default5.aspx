@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default5.aspx.cs" Inherits="RB2017.articles.creating_a_help_desk_web_application_asp_net_ms_sql_server.default5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Creating Our Method</h3>
 <p>From our default.aspx.cs file, it would be nice if we could create a generic container that could call a method in our class file, which in turn would call a stored procedure, return the data and then bind to our dropdown list. We can do this by creating a static method in our severity class that implements ICollection, which supports methods for dealing with collections of data -- exactly what we have. Let's add this code:</p>

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default3.aspx.cs" Inherits="RB2017.articles.creating_a_help_desk_web_application_asp_net_ms_sql_server.default3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Create the Style Sheet and the Markup</h3>
 <p>Take these steps to creat a style sheet:</p>

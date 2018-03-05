@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.creating_a_help_desk_web_application_asp_net_ms_sql_server.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating a Help Desk Web Application Using ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Relational Databases</h3>
 <p>When learning about databases, one of the toughest concepts to understand is relationships in data. In relational databases you shouldn't duplicate data, and you especially shouldn't leave your database vulnerable to scalability or maintenance issues. We get around this by relating our data to other tables. This way, we don't duplicate data and our database remains scalable, which usually alleviates the maintenance pain point.</p>

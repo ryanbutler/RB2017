@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating an Registration and Confirmation System with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default4.aspx.cs" Inherits="RB2017.articles.creating_a_registration_and_confirmation_system_asp_net_ms_sql_server.default4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating an Registration and Confirmation System with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Writing the Clear Fields Functionality</h3>
 <p>You could write this functionality server-side but it's a hit you don't need to incur. You can do it client-side with JavaScript. Create your JavaScript file by following these steps:</p>

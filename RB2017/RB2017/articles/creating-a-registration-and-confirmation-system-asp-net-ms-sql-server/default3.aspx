@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating an Registration and Confirmation System with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default3.aspx.cs" Inherits="RB2017.articles.creating_a_registration_and_confirmation_system_asp_net_ms_sql_server.default3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating an Registration and Confirmation System with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Creating Your Registration Object and Writing Your Submit Functionality</h3>
 <p>Switch back to default.aspx.cs, and create your registration object as shown below:</p>

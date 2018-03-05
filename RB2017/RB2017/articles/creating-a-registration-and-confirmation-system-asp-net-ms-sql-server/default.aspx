@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Creating an Registration and Confirmation System with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="RB2017.articles.creating_a_asp_net_registration_and_confirmation_system._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $('#articles').addClass('articles');
+</script>
 <h2>Creating an Registration and Confirmation System with ASP.NET (ASPX) and MS SQL Server</h2>
 <p>In today's social networking world, relying on past methods of contact is pretty much a lost cause. More people are relying on Facebook and Twitter to stay informed. While you can use a Facebook event to let a group of acquaintances -- say, alumni from your high school graduating class -- register for an event, it's not nearly as flexible as a customized application. Developing a customized Web application that allows for registration and then sends an email confirmation is relatively simple using ASP.NET.</p>
 <p>When planning to develop this type of application, one requirement is apparent: a basic form that will collect first and last name, email address, and a few other options to confirm whether the alumni are attending dinner and how much it will cost. When they submit the information, you can store that information in a database, as well as send them an email confirming those details.</p>

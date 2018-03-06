@@ -32,13 +32,13 @@ namespace RB2017
 				if (match.Success)
 				{
 					MailAddress from = new MailAddress(email);
-					smtpClient.Credentials = new System.Net.NetworkCredential("", "");
+					smtpClient.Credentials = new System.Net.NetworkCredential("--replace with email", "--replace with password");
 					smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-					MailMessage mailMessage = new MailMessage(EmailTB.Text.ToString(), "");
+					MailMessage mailMessage = new MailMessage(EmailTB.Text.ToString(), "--replace with email");
 					mailMessage.Subject = "Contact Me";
 					mailMessage.IsBodyHtml = false;
-					StringBuilder sb = new StringBuilder();
+                    StringBuilder sb = new StringBuilder();
 					sb.Append("First Name: " + FNameTB.Text);
 					sb.Append(Environment.NewLine);
 					sb.Append("Last Name: " + LNameTB.Text);

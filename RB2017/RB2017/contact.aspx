@@ -53,6 +53,6 @@
 </form>
 </asp:PlaceHolder>
 <asp:PlaceHolder ID="successPH" runat="server" Visible="false">
-<p>Thank you for your submission.</p>
+<p>Thank you for your submission. I'll be in contact as soon as possible.</p>
 </asp:PlaceHolder>
 </asp:Content>

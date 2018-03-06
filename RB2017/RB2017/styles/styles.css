@@ -338,6 +338,10 @@ table.crud td{
     padding:10px;
 }
 
+table#contact_form td{
+    vertical-align:top;
+}
+
 /* ==================================================
    #Resumé Settings
 ================================================== */
@@ -464,6 +468,7 @@ h1, h2, h3, h4, h5, h6 {
 p.alignCenter{
     text-align:center;
 }
+
 
 /* #Links
 ================================================== */

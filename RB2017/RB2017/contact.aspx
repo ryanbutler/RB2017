@@ -7,7 +7,7 @@
 <asp:PlaceHolder ID="formPH" runat="server" Visible="true">
 <form runat="server">
 <asp:ValidationSummary ID="vsErrorMessages" runat="server" DisplayMode="BulletList" ShowMessageBox="false" ShowSummary="true" ForeColor="Red" Font-Size="Medium"/>
-<table>
+<table id="contact_form">
 <tr>
 <td>First Name:</td>
 <td><asp:TextBox ID="FNameTB" runat="server"/>

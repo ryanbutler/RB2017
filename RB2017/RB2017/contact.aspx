@@ -2,10 +2,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <script type="text/javascript">
     $("#contact").addClass("contact");
-    $(function () {
-        //need the rendered id and not the static id used below
-        $("#MainContent_FNameTB").focus();
-    })
 </script>
 <h2>Contact Me</h2>
 <asp:PlaceHolder ID="formPH" runat="server" Visible="true">
@@ -38,7 +34,7 @@
 </asp:RadioButtonList>
 </td>
 </tr>
-<tr>
+<tr id="whichArticle" style="display:none;">
 <td>Which article?</td>
 <td><asp:DropDownList ID="ddlWhichArticle" runat="server" />
 <asp:RequiredFieldValidator ID="rfvWhichArticle" runat="server" ControlToValidate="ddlWhichArticle" InitialValue="1" ErrorMessage="Which article selection is required." Display="None"/>

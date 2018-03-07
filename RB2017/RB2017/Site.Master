@@ -26,19 +26,19 @@
 <meta name="twitter:site" content="@ryancbutler"/>
 <meta name="twitter:creator" content="@ryancbutler" />
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-<link href="styles/lightbox.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="styles/skeleton.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="styles/styles.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="styles/ui.totop.css" rel="stylesheet" type="text/css" media="screen" />
-<link rel="stylesheet" href="styles/highlighter/default.css" media="screen">
 <asp:PlaceHolder runat="server">
-<%--<%: Scripts.Render("~/Scripts/easing.js") %>--%>
-<%--<%: Scripts.Render("~/Scripts/jquery.ui.totop.js") %>--%>
-<%--<%: Scripts.Render("~/Scripts/uitotophelper.js") %>--%>
+<%: Styles.Render("~/styles/skeleton.css") %>
+<%: Styles.Render("~/styles/styles.css") %>
+<%: Styles.Render("~/styles/lightbox.css") %>
+<%: Styles.Render("~/styles/highlighter/default.css") %>
+<%: Styles.Render("~/styles/ui.totop.css") %>
+<%: Scripts.Render("~/Scripts/easing.js") %>
+<%: Scripts.Render("~/Scripts/jquery.ui.totop.js") %>
+<%: Scripts.Render("~/Scripts/uitotophelper.js") %>
 <%--<%: Scripts.Render("~/Scripts/contact.js") %>--%>
 <%: Scripts.Render("~/Scripts/google.js") %>
 <%: Scripts.Render("~/Scripts/highlight.pack.js") %>
-<%--<%: Scripts.Render("~/Scripts/focus.js") %>--%>
+<%: Scripts.Render("~/Scripts/lightbox.js") %>
 </asp:PlaceHolder>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -46,14 +46,18 @@
 </script>
 </head>
 <body>
-<%--<%: Scripts.Render("~/Scripts/easing.js") %>--%>
-<%--<%: Scripts.Render("~/Scripts/uitotophelper.js") %>--%>
-<%--<%: Scripts.Render("~/Scripts/jquery.ui.totop.js") %>--%>
+<%: Styles.Render("~/styles/skeleton.css") %>
+<%: Styles.Render("~/styles/styles.css") %>
+<%: Styles.Render("~/styles/lightbox.css") %>
+<%: Styles.Render("~/styles/highlighter/default.css") %>
+<%: Styles.Render("~/styles/ui.totop.css") %>
+<%: Scripts.Render("~/Scripts/easing.js") %>
+<%: Scripts.Render("~/Scripts/uitotophelper.js") %>
+<%: Scripts.Render("~/Scripts/jquery.ui.totop.js") %>
 <%--<%: Scripts.Render("~/Scripts/contact.js") %>--%>
 <%: Scripts.Render("~/Scripts/google.js") %>
 <%: Scripts.Render("~/Scripts/highlight.pack.js") %>
-<%--<%: Scripts.Render("~/Scripts/focus.js") %>--%>
-<%--<%: Scripts.Render("~/Scripts/jquery-2.1.4.min.js") %>--%>
+<%: Scripts.Render("~/Scripts/lightbox.js") %>
 <div id="header">
 <div class="container">
 <!-- start #logo -->

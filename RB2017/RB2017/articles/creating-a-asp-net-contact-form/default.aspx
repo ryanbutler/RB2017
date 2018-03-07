@@ -8,9 +8,9 @@
 </p>
 <p>In this article, we will look at creating a ASP.NET contact form that will allow us to capture specific information that we need, validate form fields using client and server side languages to ensure that fields are not empty and then send the results to a specified recipient (s) that will allow them to respond to the visitor in depth when time and information permits. To do this, we need to download and install the .NET framework, understand client-server architecture and its relation to web programming. If you would like to learn how to create such a form, as well as learning about these concepts in-depth please follow along with the article below.</p>
 <h3>Download and Install .NET Framework</h3>
-<p>Open a web browser, and type download .net framework. Pick the latest web installer available from the search results.</p>
+<p>Open a web browser, and type download .net framework. Pick the latest version of the framework and the offline installer.</p>
 <h3>Download and Install Visual Studio</h3>
-<p>Open a web browser, and type download visual studio community edition. Pick a relevant link that allows an operation to occur.</p>
+<p>Open a web browser, and type download visual studio community edition. Choose the first link that shows in the search results and then download Visual Studio Community.</p>
 <h3>Create the project solution</h3>
 <p>Open Visual Studio, and from the main menu complete the following:</p>
 <ol>

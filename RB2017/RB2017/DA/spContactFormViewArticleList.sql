@@ -30,5 +30,6 @@ BEGIN
     -- Insert statements for procedure here
 	SELECT *
 	FROM Contact_Form
+	ORDER BY Article_Name ASC
 END
 GO

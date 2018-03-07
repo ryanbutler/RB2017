@@ -17,6 +17,7 @@ namespace RB2017
 			if (!IsPostBack)
 			{
 				LoadData();
+                FNameTB.Focus();
 			}
 		}
 
@@ -25,7 +26,7 @@ namespace RB2017
 			if (IsValid)
 			{
 
-				SmtpClient smtpClient = new SmtpClient("ryanbutler.ws", 25);
+				SmtpClient smtpClient = new SmtpClient("--replace with email", 25);
 				string email = EmailTB.Text.ToString();
 				Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 				Match match = regex.Match(email);

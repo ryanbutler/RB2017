@@ -3,10 +3,10 @@
 <script type="text/javascript">
     $('#articles').addClass('articles');
 </script>
-<h3>Hypertext Markup Language (HTML)</h3>
-<p><a href="articles/creating-a-html-web-page/default.aspx">Creating a HTML web page</a></p>
+<%--<h3>Hypertext Markup Language (HTML)</h3>
+<p><a href="articles/creating-a-html-web-page/default.aspx">Creating a HTML web page</a></p>--%>
 <h3>Cascading Style Sheets (CSS)</h3>
-<p><a href="articles/introduction-to-css/default.aspx">Introduction to CSS</a></p>
+<%--<p><a href="articles/introduction-to-css/default.aspx">Introduction to CSS</a></p>--%>
 <p><a href="articles/creating-a-cascading-style-sheet-layout/default.aspx">Creating a Cascading Style Sheet Layout</a></p>
 <p><a href="articles/creating-a-cascading-style-sheet-print-page/default.aspx">Creating a Cascading Style Sheet Print Page</a></p>
 <p><a href="articles/creating-a-cascading-style-sheet-web-form/default.aspx">Creating a Cascading Style Sheet Web Form</a></p>

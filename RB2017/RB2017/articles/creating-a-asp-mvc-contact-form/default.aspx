@@ -21,17 +21,14 @@
 <td colspan="2" class="caption"><a href="https://aspmvcemailcontactform.codeplex.com/releases/view/616716" target="_blank">Source Files</a></td>
 </tr>
 </table>
-<h3>Prerequisites</h3>
-<p>We will need the following installed:</p>
-<ol>
-<li>Visual Studio 2010 or later (examples here are in VS 2010)</li>
-<li>ASP MVC 4 or later -- visit <a href="http://www.asp.net/mvc/mvc4">http://www.asp.net/mvc/mvc4</a> to download and install</li>
-<li>.NET framework</li>
-</ol>
-<h3>Start Visual Studio 2010</h3>
+<h3>Download and Install .NET Framework</h3>
+<p>Open a web browser, and type download .net framework. Pick the latest version of the framework and the offline installer.</p>
+<h3>Download and Install Visual Studio</h3>
+<p>Open a web browser, and type download visual studio community edition. Choose the first link that shows in the search results and then download Visual Studio Community.</p>
+<h3>Start Visual Studio</h3>
 <p>From the desktop:</p>
 <ol>
-<li>Start Microsoft Visual Studio 2010</li>
+<li>Start Microsoft Visual Studio</li>
 <li>From the start page, left click File : New : Project</li>
 <li>From the New Projects window, choose Web and ASP.NET MVC Web Application:</li>
 </ol>

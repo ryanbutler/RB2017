@@ -36,12 +36,20 @@ namespace RB2017
 
             bundles.Add(new ScriptBundle("~/bundles/Scripts").Include(
                     "~/Scripts/google.js",
-					"~/Scripts/highlight.pack.js"
+					"~/Scripts/highlight.pack.js",
+                    "~/Scripts/google.js",
+                    "~/Scripts/lightbox-plus-jquery.min.js",
+                    "~/Scripts/jquery-3.3.1.min.js",
+                    "~/Scripts/jquery.ui.totop.js",
+                    "~/Scripts/easing.js"
                     ));
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(
                     "~/styles/skeleton.css",
-                    "~/styles/styles.css"
+                    "~/styles/styles.css",
+                    "~/styles/lightbox.css",
+                    "~/styles/highlighter/default.css",
+                    "~/styles/ui.totop.css"
                     ));
             
             ScriptManager.ScriptResourceMapping.AddDefinition(

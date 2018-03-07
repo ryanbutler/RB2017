@@ -32,14 +32,12 @@
 <%: Styles.Render("~/styles/lightbox.css") %>
 <%: Styles.Render("~/styles/highlighter/default.css") %>
 <%: Styles.Render("~/styles/ui.totop.css") %>
-<%: Scripts.Render("~/Scripts/easing.js") %>
-<%: Scripts.Render("~/Scripts/jquery.ui.totop.js") %>
-<%: Scripts.Render("~/Scripts/uitotophelper.js") %>
 <%: Scripts.Render("~/Scripts/google.js") %>
 <%: Scripts.Render("~/Scripts/highlight.pack.js") %>
-<%: Scripts.Render("~/Scripts/lightbox.js") %>
+<%: Scripts.Render("~/Scripts/lightbox-plus-jquery.min.js") %>
 <%: Scripts.Render("~/Scripts/jquery-3.3.1.min.js") %>
-<%: Scripts.Render("~/Scripts/rb.js") %>
+<%: Scripts.Render("~/Scripts/jquery.ui.totop.js") %>
+<%: Scripts.Render("~/Scripts/easing.js") %>
 </asp:PlaceHolder>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();
@@ -76,6 +74,8 @@
 <div id="footer">
 <p>2012 &#8212; <%: DateTime.Now.Year %>  &#8212; Ryan Butler</p>
 </div>
-<a id="toTop" style="display:none;" href="#"><span id="toTopHover"></span></a>
+<script type="text/javascript">
+  $().UItoTop({ easingType: 'easeOutQuart' });
+</script>
 </body>
 </html>

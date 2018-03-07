@@ -18,7 +18,7 @@
 <td colspan="2" class="header">Download Project Files </td>
 </tr>
 <tr>
-<td colspan="2" class="caption"><a href="https://aspmvcemailcontactform.codeplex.com/releases/view/616716" target="_blank">Source Files</a></td>
+<td colspan="2" class="caption"><a href="" target="_blank">Source Files</a></td>
 </tr>
 </table>
 <h3>Download and Install .NET Framework</h3>
@@ -30,14 +30,18 @@
 <ol>
 <li>Start Microsoft Visual Studio</li>
 <li>From the start page, left click File : New : Project</li>
-<li>From the New Projects window, choose Web and ASP.NET MVC Web Application:</li>
+<li>From the New Projects window, choose Web and ASP.NET MVC Web Application (.NET Framework):</li>
 </ol>
-<p class="alignCenter"><a href="images/1.png")" data-lightbox="image-1"><img src="thumbs/1.png" alt="New Projects window" width="276" height="82" /></a></p>
 <p>In the name, location and solution name text fields, choose the following:</p>
-<p class="alignCenter"><a href="images/2.png" data-lightbox="image-2"><img src="thumbs/2.png" alt="New Projects window" width="270" height="33" /></a></p>
-<p>Click OK. In the New ASP.NET MVC Project window, choose Internet Application and leave the rest as defaults:</p>
-<p class="alignCenter"><a href="images/3.png" data-lightbox="image-3"><img src="thumbs/3.png" alt="New ASP.NET 4 Project" width="269" height="158" /></a></p>
-<p>Click OK. Visual Studio will work in the background for a bit and once finished, we’ll have a complete solution created, as well as HomeController.cs opened.</p>
+<ol>
+<li>In the Name text field, type MvcContactForm</li>
+<li>In the Location text field, choose a directory (the root of a directory works best)</li>
+<li>From the bottom right side of the screen, underneath the browse button, leave Create directory for solution checked</li>
+<li>Click OK</li>
+<li>In the New ASP.NET Web Application window, choose MVC</li>
+<li>Click OK</li>
+</ol>
+<p>Visual Studio will work in the background for a bit and once finished, we’ll have a complete solution created</p>
 <h3>The Solution Explorer</h3>
 <p>Before moving forward, it’s important to understand the structure and files created in an ASP MVC project. Let’s use the following table for a brief, but concise explanation of the folders and files created: </p>
 <table class="crud">
@@ -86,7 +90,6 @@ JavaScript enabled.</td>
 </table>
 <h3>A few things to note…</h3>
 <p>We have removed the default _ViewStart.cshtml file from the solution, and taken its one line razor snippet and placed at the top of our index, contact, and about razor files which reside in Views: Home directory of our solution.</p>
-<p>We’ve also removed default indentation of these razor views to alleviate the extra bytes that would be sent on each HTTP request, plus, it makes our markup look a bit more readable. Last, we’ve left the default style sheet in place just to make things a bit easier from a stylistic stand point, so we can focus on the form itself.</p>
 <h3>Create the model</h3>
 <p>In order to bind and validate our HTML 5 form fields, we need to create a model. Models in MVC are where you create class level variables that will pass the data collected to a view or controller. Models also allow us to validate input and make sure required fields are not empty, as well as handling regular expressions, and setting or checking minimum/maximum length.</p>
 <p>For our form, we’ll have four fields:</p>

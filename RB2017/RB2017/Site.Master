@@ -38,8 +38,9 @@
 <%: Scripts.Render("~/Scripts/google.js") %>
 <%: Scripts.Render("~/Scripts/highlight.pack.js") %>
 <%: Scripts.Render("~/Scripts/lightbox.js") %>
+<%: Scripts.Render("~/Scripts/jquery-3.3.1.min.js") %>
+<%: Scripts.Render("~/Scripts/rb.js") %>
 </asp:PlaceHolder>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();
 </script>

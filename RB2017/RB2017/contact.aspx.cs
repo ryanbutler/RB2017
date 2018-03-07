@@ -17,26 +17,25 @@ namespace RB2017
 			if (!IsPostBack)
 			{
 				LoadData();
-                FNameTB.Focus();
-			}
+            }
 		}
 
-		protected void Send_Mail(object sender, EventArgs e)
+        protected void Send_Mail(object sender, EventArgs e)
 		{
 			if (IsValid)
 			{
 
-				SmtpClient smtpClient = new SmtpClient("--replace with email", 25);
+				SmtpClient smtpClient = new SmtpClient("www.ryanbutler.ws", 25);
 				string email = EmailTB.Text.ToString();
 				Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 				Match match = regex.Match(email);
 				if (match.Success)
 				{
 					MailAddress from = new MailAddress(email);
-					smtpClient.Credentials = new System.Net.NetworkCredential("--replace with email", "--replace with password");
+					smtpClient.Credentials = new System.Net.NetworkCredential("--replace with email--", "-replace with password--");
 					smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-					MailMessage mailMessage = new MailMessage(EmailTB.Text.ToString(), "--replace with email");
+					MailMessage mailMessage = new MailMessage(EmailTB.Text.ToString(), "--replace with email--");
 					mailMessage.Subject = "Contact Me";
 					mailMessage.IsBodyHtml = false;
                     StringBuilder sb = new StringBuilder();
@@ -45,7 +44,9 @@ namespace RB2017
 					sb.Append("Last Name: " + LNameTB.Text);
 					sb.Append(Environment.NewLine);
 					sb.Append("Email: " + EmailTB.Text);
-					sb.Append(Environment.NewLine);
+                    sb.Append(Environment.NewLine);
+                    sb.Append("Article Question? " + rblArticleQuestion.SelectedItem.Value.ToString());
+                    sb.Append(Environment.NewLine);
 					sb.Append("Which article? " + ddlWhichArticle.SelectedItem.Text.ToString());
 					sb.Append(Environment.NewLine);
 					sb.Append("Comments: " + CommentsTB.Text);

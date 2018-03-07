@@ -94,22 +94,13 @@ namespace RB2017 {
         protected global::System.Web.UI.WebControls.Label invalidEmailFormat;
         
         /// <summary>
-        /// radArticleQuestionYes control.
+        /// rblArticleQuestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radArticleQuestionYes;
-        
-        /// <summary>
-        /// radArticleQuestionNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radArticleQuestionNo;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblArticleQuestion;
         
         /// <summary>
         /// ddlWhichArticle control.

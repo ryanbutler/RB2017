@@ -2,6 +2,10 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <script type="text/javascript">
     $("#contact").addClass("contact");
+    $(function () {
+        //need the rendered id and not the static id used below
+        $("#MainContent_FNameTB").focus();
+    })
 </script>
 <h2>Contact Me</h2>
 <asp:PlaceHolder ID="formPH" runat="server" Visible="true">
@@ -29,8 +33,9 @@
 </tr>
 <tr>
 <td>Article Question?</td>
-<td><asp:RadioButton ID="radArticleQuestionYes" runat="server" Text="Yes"/>
-<asp:RadioButton ID="radArticleQuestionNo" runat="server" Text="No"/>
+<td><asp:RadioButtonList ID="rblArticleQuestion" runat="server">
+<asp:ListItem Text="Yes" Value="Yes"/><asp:ListItem Text="No" Value="No" Selected="True" />
+</asp:RadioButtonList>
 </td>
 </tr>
 <tr>

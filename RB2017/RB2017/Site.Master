@@ -35,7 +35,6 @@
 <%: Scripts.Render("~/Scripts/easing.js") %>
 <%: Scripts.Render("~/Scripts/jquery.ui.totop.js") %>
 <%: Scripts.Render("~/Scripts/uitotophelper.js") %>
-<%--<%: Scripts.Render("~/Scripts/contact.js") %>--%>
 <%: Scripts.Render("~/Scripts/google.js") %>
 <%: Scripts.Render("~/Scripts/highlight.pack.js") %>
 <%: Scripts.Render("~/Scripts/lightbox.js") %>
@@ -46,18 +45,6 @@
 </script>
 </head>
 <body>
-<%: Styles.Render("~/styles/skeleton.css") %>
-<%: Styles.Render("~/styles/styles.css") %>
-<%: Styles.Render("~/styles/lightbox.css") %>
-<%: Styles.Render("~/styles/highlighter/default.css") %>
-<%: Styles.Render("~/styles/ui.totop.css") %>
-<%: Scripts.Render("~/Scripts/easing.js") %>
-<%: Scripts.Render("~/Scripts/uitotophelper.js") %>
-<%: Scripts.Render("~/Scripts/jquery.ui.totop.js") %>
-<%--<%: Scripts.Render("~/Scripts/contact.js") %>--%>
-<%: Scripts.Render("~/Scripts/google.js") %>
-<%: Scripts.Render("~/Scripts/highlight.pack.js") %>
-<%: Scripts.Render("~/Scripts/lightbox.js") %>
 <div id="header">
 <div class="container">
 <!-- start #logo -->

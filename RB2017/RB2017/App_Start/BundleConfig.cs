@@ -38,6 +38,11 @@ namespace RB2017
                     "~/Scripts/google.js",
 					"~/Scripts/highlight.pack.js"
                     ));
+
+            bundles.Add(new StyleBundle("~/bundles/styles").Include(
+                    "~/styles/skeleton.css",
+                    "~/styles/styles.css"
+                    ));
             
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",

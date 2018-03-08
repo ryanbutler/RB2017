@@ -36,7 +36,7 @@ protected void SendMail(object sender, EventArgs e)
         mail.From = new MailAddress(EmailTB.Text);
         mail.To.Add("myemail@domain.com");
         mail.Subject = "Contact Us";
-        mail.IsBodyHtml = true;
+        mail.IsBodyHtml = false;
     }
 </code></pre>
 <p>As you can see from the example above, we set the IsBodyHTML property of our mail object to true, which will allow any HTML enabled email client to parse and read the HTML.</p>

@@ -18,7 +18,7 @@ In the MVC paradigm, views are a special type of file that contain HTML 5 markup
 <p>As you can see, we assign our title using the dynamic object ViewBag, and assign our base template. While in the editor, press F5 to preview your website, which should show an empty screen. If you left-click contact, you should see an empty page. Stop debugging by pressing the Stop button or Shift + F5.</p>
 <p>Inside our razor file, just below the closing curly brace, add the following:</p>
 <pre><code>
-&lt;h1&gt;contact us&lt;h1/&gt;
+&lt;h1&gt;contact us&lt;/h1&gt;
 @using (Html.BeginForm())
 {
 }

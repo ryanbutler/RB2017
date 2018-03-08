@@ -32,12 +32,14 @@
 <li>Leave Create direction for solution checked</li>
 <li>Click Ok</li>
 </ol>
-<h3>Creating the Web Form</h3>
-<p>With the project solution open in Visual Studio, in order to create our contact form, complete the following steps:</p>
+<h3>Delete the original contact.aspx</h3>
+<p>With our solution created, look for contact.aspx and remove it from the solution.</p>
+<h3>Create our new contact.aspx</h3>
+<p>Follow these steps to create our new contact.aspx:</p>
 <ol>
-<li>Right click on the solution</li>
-<li>Choose Add : New Item</li>
-<li>In the Add New Item Window, choose Web, Web Form with Master Page, and in the name text field, name the file contact.aspx</li>
+<li>Once completed, right-click on the solution and choose Add New Item.</li>
+<li>In the Add New Item window, choose Web Form</li>
+<li>In the Name text field, type Contact.aspx</li>
 <li>Click Add</li>
 </ol>
 <p>You will notice when the editor created our file, it created two:</p>
@@ -51,14 +53,19 @@ The first file contains our presentational logic, such as HTML, CSS, JavaScript,
 <h3>Working with our presentation file (contact.aspx) first</h3>
 <p>Even though these files are associated together, it often helps to work with them separately, and more importantly, work with the presentational file first, and then focus on making the form do what we want later.</p>
 <h3>Creating and analyzing the form</h3>
-<p>Inside the file, you'll notice that it looks just like any other HTML page. It has a normal HTML structure that you would expect, but behind this ordinary markup, there's a wealth of power and flexibility we'll tap into. You'll notice that by default our editor created a &lt;form&gt; tag. By default, all ASP.NET web forms have a form tag and we'll understand why that's important later in the article. Inside the opening and closing form tag, let's create a basic table structure that will collect first and last name, email, and comments from our visitor as shown below:</p>
+<p>Inside the file, you'll notice that it looks just like any other HTML page. It has a normal HTML structure that you would expect, but behind this ordinary markup, 
+there's a wealth of power and flexibility we'll tap into. You'll notice that by default our editor created a &lt;form&gt; tag. By default, all ASP.NET web forms have a form tag and 
+we'll understand why that's important later in the article. Inside the opening and closing form tag, let's create a basic table structure that will collect first and last name, email, 
+and comments from our visitor as shown below:
+</p>
 <pre><code>
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; 
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt; 
-&lt;head runat="server"&gt; 
-&lt;title&gt;&lt;/title&gt; 
-&lt;/head&gt; 
-&lt;body&gt; 
+&lt;%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="AspWebContactForm.contact" %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
 &lt;form id="form1" runat="server"&gt; 
 &lt;h3&gt;My Contact Form&lt;/h3&gt; 
 &lt;table id="contact" cellspacing="0"&gt; 
@@ -80,8 +87,6 @@ The first file contains our presentational logic, such as HTML, CSS, JavaScript,
 &lt;/tr&gt; 
 &lt;/table&gt; 
 &lt;/form&gt; 
-&lt;/body&gt; 
-&lt;/html&gt;
 </code></pre>
 <p>As you can see from the example above, we're dealing with an ordinary table with an ID that we can use for controlling the presentational aspect of our page, that is, a style sheet. However, for the purposes of this article, we'll focus on the ASP.NET environment in relation to the form.</p>
 <h3>Client-server architecture demystified</h3>
@@ -99,12 +104,6 @@ The first file contains our presentational logic, such as HTML, CSS, JavaScript,
 </ol>
 <p>To create our ordinary input fields, we'll be using text box web controls. Let's add three of them to our file by using the code below:</p>
 <pre><code>
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head runat="server"&gt;
-&lt;title&gt;&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
 &lt;form id="form1" runat="server"&gt;
 &lt;h3&gt;My Contact Form&lt;/h3&gt;
 &lt;table id="contact" cellspacing="0"&gt;
@@ -126,8 +125,6 @@ The first file contains our presentational logic, such as HTML, CSS, JavaScript,
 &lt;/tr&gt;
 &lt;/table&gt;
 &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
 </code></pre>
 <p>As you can see from the example above, our web control(s) look a bit odd, but really they're simple. Using the first one as an example, let's analyze it:</p>
 <pre><code>

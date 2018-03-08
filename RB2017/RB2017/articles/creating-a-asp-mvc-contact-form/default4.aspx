@@ -52,7 +52,16 @@ public string Comment { get; set; }
 <p>We annotate our class variable with a required attribute followed by an appropriate error message.</p>
 <h3>Adding validation to our form</h3>
 <p>In our razor web page, add the following:</p>
-<p class="alignCenter"><a href="images/razor6.png" data-lightbox="image-razor6"><img src="thumbs/razor6.png" alt="Razor Syntax 6" width="265" height="59" /></a></p>
+<pre><code>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+&lt;div class="row"&gt;
+  @Html.LabelFor(model => model.FirstName, "First Name")
+  @Html.EditorFor(model => model.FirstName)
+    @Html.ValidationMessageFor(model=> model.FirstName)
+&lt;/div&gt;
+</code></pre>
 <p>As you can see from the code above, we add:</p>
 <ol>
 <li>A validation summary at the beginning of the form and suppress the unordered list that would be shown by passing in the Boolean true.</li>

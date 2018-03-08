@@ -11,7 +11,7 @@
 <td colspan="2" class="header">Download Project Files </td>
 </tr>
 <tr>
-<td colspan="2" class="caption"><a href="https://github.com/ryanbutler/creating-a-cascading-style-sheet-print-page/tree/creating-a-cascading-style-sheet-print-page" target="_blank">GitHub Source</a></td>
+<td colspan="2" class="caption"><a href="CSSPrint.zip" target="_blank">Zip File</a></td>
 </tr>
 </table>
 <h3>Analysis</h3>

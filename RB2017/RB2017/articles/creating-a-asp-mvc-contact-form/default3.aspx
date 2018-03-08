@@ -79,7 +79,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Net.Mail;
-using Mvc4ContactForm.Models;
+using MvcContactForm.Models;
 </code></pre>
 <p>We'll continue by adding validation to our controller <a href="default4.aspx">next</a>.</p>
 </asp:Content>

@@ -5,43 +5,7 @@
 </script>
 <h2>Creating a ASP.NET MVC Contact Form</h2>
 <h3>Adjusting CSS</h3>
-<p>From the solution explorer, open the CSS file by following these steps:</p>
-<ol>
-<li>Expand Content, and double -click Site.css</li>
-</ol>
-<p>Let’s first tackle our form fields. In Site.css, at line 427, comment out the following CSS:</p>
-<pre><code>
-/*input, textarea {
-border: 1px solid #e2e2e2;
-background: #fff;
-color: #333;
-font-size: 1.2em;
-margin: 5px 0 6px 0;
-padding: 5px;
-width: 300px;
-}
-*/
-</code></pre>
-<p>Next, at line 453, comment out the following CSS:</p>
-<pre><code>
-/*input[type="submit"],
-input[type="button"],
-button {
-background-color: #d3dce0;
-border: 1px solid #787878;
-cursor: pointer;
-font-size: 1.2em;
-font-weight: 600;
-padding: 7px;
-margin-right: 8px;
-width: auto;
-}
-*/
-</code></pre>
-<p>Save your changes, and preview the results in a browser. It should look like this:</p>
-<p class="alignCenter"><a href="images/14.png" data-lightbox="image-14"><img src="thumbs/14.png")" alt="Preview of Finished form" width="250" height="139" /></a></p>
-<p>Once finished, return to Visual Studio and stop debugging by pressing the stop button or by pressing Shift + F5.</p>
-<p>Add the following CSS at the end of our style sheet:</p>
+<p>Add the following CSS at the top of our Contact.cshtml:</p>
 <pre><code>
 /* new styles */
 div.row

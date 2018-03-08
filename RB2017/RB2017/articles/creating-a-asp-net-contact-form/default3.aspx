@@ -50,10 +50,10 @@ protected void SendMail(object sender, EventArgs e)
         mail.To.Add("myemail@domain.com");
         mail.Subject = "Contact Us";
         mail.IsBodyHtml = true;
-        mail.Body = "First Name: " + FNameTB.Text + "<br />";
-        mail.Body += "Last Name: " + LNameTB.Text + "<br />";
-        mail.Body += "Email: " + EmailTB.Text + "<br />";
-        mail.Body += "Comments: " + CommentsTB.Text + "<br />";
+        mail.Body = "First Name: " + FNameTB.Text + "";
+        mail.Body += "Last Name: " + LNameTB.Text + "";
+        mail.Body += "Email: " + EmailTB.Text + "";
+        mail.Body += "Comments: " + CommentsTB.Text + "";
     }
 
 </code></pre>

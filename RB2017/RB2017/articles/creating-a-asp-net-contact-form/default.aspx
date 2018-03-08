@@ -20,7 +20,7 @@
 <li>ASP.NET Web Application (.NET Framework)</li>
 <li>In the name text field, type AspWebContactForm</li>
 <li>In the location, select a folder (the root directory works the best)</li>
-<li>In the solution text field,  is listed</li>
+<li>In the solution text field, AspWebContactForm is listed</li>
 <li>Leave Create direction for solution checked</li>
 <li>Click Ok</li>
 </ol>

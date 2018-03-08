@@ -58,11 +58,11 @@ protected void SendMail(object sender, EventArgs e)
             mail.From = new MailAddress(EmailTB.Text);
             mail.To.Add("myemail@domain.com");
             mail.Subject = "Contact Us";
-            mail.IsBodyHtml = true;
-            mail.Body = "First Name: " + FNameTB.Text + "<br />";
-            mail.Body += "Last Name: " + LNameTB.Text + "<br />";
-            mail.Body += "Email: " + EmailTB.Text + "<br />";
-            mail.Body += "Comments: " + CommentsTB.Text + "<br />";
+            mail.IsBodyHtml = false;
+            mail.Body = "First Name: " + FNameTB.Text + "";
+            mail.Body += "Last Name: " + LNameTB.Text + "";
+            mail.Body += "Email: " + EmailTB.Text + "";
+            mail.Body += "Comments: " + CommentsTB.Text + "";
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "your_mail_server";
             smtp.Send(mail);
@@ -71,6 +71,13 @@ protected void SendMail(object sender, EventArgs e)
 
 </code></pre>
 <p>As you can see from the example above, we perform a conditional check within our send mail event. Inside the check, we perform a Boolean check on the IsValid property, which essentially checks the values of all our controls in our page. As a result, if any of the controls come back as false, meaning they're empty, we issue a return statement that stops the rest of the event from firing and provides our visitor with an error message as to what went wrong. If all controls that we require come back as true, meaning they're filled in, then the rest of our send mail event is allowed to execute, and subsequently, send our email message. Save your file, disable JavaScript and leave a few fields blank, and the error messages should show. At this point, we have a completed file that is ready and working.</p>
+<h3>Some loose ends</h3>
+
+<p>There are a few items that need to be done when using this solution in a production environment:</p>
+<ol>
+<li>Verify your hosting provider’s SMTP host address and port number</li>
+<li>Verify your hosting provider’s current .NET version</li>
+</ol>
 <h3>Sending a test email</h3>
 <p>Presuming the SMTP client is configured correctly on the remote server, go ahead and fill in our fields, click submit, and you should get an email from our form delivered to your inbox in a few minutes.</p>
 <h3>View State</h3>

@@ -49,7 +49,7 @@
 The first file contains our presentational logic, such as HTML, CSS, JavaScript, our web and validation controls, while the second file contains our business logic such as event handlers that will send the email message to our specified recipient, and perform client and server-side validation.
 </p>
 <h3>Working with our presentation file (contact.aspx) first</h3>
-<p>Even though these files are associated together, it often helps to work with them separately, and more importantly, work with the presentational file first, and then focus on making the form do what we want later. For the purposes of this article, we'll be working strictly from code view, as that's the best way to learn how the environment works.</p>
+<p>Even though these files are associated together, it often helps to work with them separately, and more importantly, work with the presentational file first, and then focus on making the form do what we want later.</p>
 <h3>Creating and analyzing the form</h3>
 <p>Inside the file, you'll notice that it looks just like any other HTML page. It has a normal HTML structure that you would expect, but behind this ordinary markup, there's a wealth of power and flexibility we'll tap into. You'll notice that by default our editor created a &lt;form&gt; tag. By default, all ASP.NET web forms have a form tag and we'll understand why that's important later in the article. Inside the opening and closing form tag, let's create a basic table structure that will collect first and last name, email, and comments from our visitor as shown below:</p>
 <pre><code>

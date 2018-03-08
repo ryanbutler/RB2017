@@ -102,13 +102,9 @@ JavaScript enabled.</td>
 <p>Let’s create our model by following these steps:</p>
 <ol>
 <li>From the solution explorer, right click Models : Add : Class</li>
+<li>In the Add new item window, type ContactModels.cs</li>
+<li>Click Add</li>
 </ol>
-<p class="alignCenter"><a href="images/21.png" data-lightbox="image-21"><img src="thumbs/21.png" alt="Models Add Class" width="285" height="141" /></a></p>
-<ol>
-<li>In the Add new item window, type ContactModels.cs, in the name text field</li>
-</ol>
-<p class="alignCenter"><a href="images/6.png" data-lightbox="image-6"><img src="thumbs/6.png" alt="Create model" width="228" height="147" /></a></p>
-<p>Click Add.</p>
 <p>In our new model class, let’s create our form field’s variables:</p>
 <pre><code>
 public class ContactModels

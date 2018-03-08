@@ -68,10 +68,10 @@ protected void SendMail(object sender, EventArgs e)
         mail.To.Add("myemail@domain.com");
         mail.Subject = "Contact Us";
         mail.IsBodyHtml = true;
-        mail.Body = "First Name: " + FNameTB.Text + "&lt;br /&gt;";
-        mail.Body += "Last Name: " + LNameTB.Text + "&lt;br /&gt;";
-        mail.Body += "Email: " + EmailTB.Text + "&lt;br /&gt;";
-        mail.Body += "Comments: " + CommentsTB.Text + "&lt;br /&gt;";
+        mail.Body = "First Name: " + FNameTB.Text + "";
+        mail.Body += "Last Name: " + LNameTB.Text + "";
+        mail.Body += "Email: " + EmailTB.Text + "";
+        mail.Body += "Comments: " + CommentsTB.Text + "";
         SmtpClient smtp = new SmtpClient();
         smtp.Host = "your_relay_mail_server";
         smtp.Send(mail);

@@ -26,7 +26,7 @@ development, you’ll find the project file link helpful.
 <td colspan="2" class="header">Download Project Files </td>
 </tr>
 <tr>
-<td colspan="2" class="caption"><a href="https://github.com/ryanbutler/creating-a-cascading-style-sheet-web-form/tree/creating-a-cascading-style-sheet-web-form" target="_blank">GitHub Source</a></td>
+<td colspan="2" class="caption"><a href="StyleForm.zip" target="_blank">Zip File</a></td>
 </tr>
 </table>
 <h3>Open the web form</h3>

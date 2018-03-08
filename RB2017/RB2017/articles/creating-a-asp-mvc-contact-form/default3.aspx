@@ -7,6 +7,7 @@
 <h3>Adjusting CSS</h3>
 <p>Add the following CSS at the top of our Contact.cshtml:</p>
 <pre><code>
+&lt;style type="text/css"&gt;
 /* new styles */
 div.row
 {
@@ -28,6 +29,7 @@ div.buttons
 margin-left:150px;
 margin-top:16px;
 }
+&lt;/&lt;style&gt;
 </code></pre>
 <p>As you can see from the code above, we:</p>
 <ol>

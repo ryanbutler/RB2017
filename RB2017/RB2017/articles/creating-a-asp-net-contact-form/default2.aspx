@@ -96,13 +96,6 @@ protected void SendMail(object sender, EventArgs e)
         MailMessage mail = new MailMessage();
         mail.From = new MailAddress(EmailTB.Text);
     }
-
-protected void SendMail(object sender, EventArgs e)
-    {
-        MailMessage mail = new MailMessage();
-        mail.From = new MailAddress(EmailTB.Text);
-    }
-
 </code></pre>
 <p>As you can see from the example above, we set the property, from, of our mail object to a new instance of the mail address class, and pass in our email text box control as an argument.</p>
 <p>We'll continue by working on the Mail Message object <a href="default3.aspx">next</a>.</p>

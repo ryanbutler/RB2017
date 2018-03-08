@@ -5,9 +5,12 @@
 </script>
 <h2>Creating a ASP.NET MVC Contact Form</h2>
 <h3>Adding mail functionality to our controller</h3>
-<p>
-With the implementation of our view and model complete, we can close both of those files from inside Visual Studio. Let’s finish by adding the functionality to e-mail the results of the form to the specified recipient. Add the following code to our HomeController.cs, specifically the [HttpPost] method:
-</p>
+<p>With the implementation of our view and model complete, we can close both of those files from inside Visual Studio.</p>
+<p>First, let's add the following name space to work with the string builder class:</p>
+<pre><code>
+using System.Text;
+</code></pre>
+<p>Next, add the functionality to e-mail the results of the form to the specified recipient by adding the following code to our HomeController.cs, specifically the [HttpPost] method:</p>
 <pre><code>
 [HttpPost]
 public ActionResult Contact(ContactModels c)
@@ -123,7 +126,15 @@ choose _Layout.cshtml
 <p class="alignCenter"><a href="images/20.png" data-lightbox="image-20"><img src="thumbs/20.png" alt="Success View" width="250" height="248" /></a></p>
 <p>Left click Add.</p>
 <p>In the view, add the following as shown below:</p>
-<p class="alignCenter"><a href="images/razor7.png" data-lightbox="image-razor7"><img src="thumbs/razor7.png" alt="Razor Syntax 7" width="300" height="51" /></a></p>
+<pre><code>
+@{
+    ViewBag.Title = "Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+&lt;h2&gt;Success&lt;/h2&gt;
+&lt;p&gt;Your message was sent successfully. We'll contact you as soon as possible.&lt;/p&gt;
+</code></pre>
 <p>Save your solution and give it a run.</p>
 <h3>Some loose ends</h3>
 <p>There are a few items that need to be done when using this solution in a production environment:</p>

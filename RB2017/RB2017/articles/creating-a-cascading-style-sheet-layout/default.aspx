@@ -25,7 +25,7 @@ file is cached on the end users computer. Lastly, it can make developing a print
 <td colspan="2" class="header">Download Project Files </td>
 </tr>
 <tr>
-<td colspan="2" class="caption"><a href="https://github.com/ryanbutler/creating-a-cascading-style-sheet-layout/tree/creating-a-cascading-style-sheet-layout" target="_blank">GitHub Source</a></td>
+<td colspan="2" class="caption"><a href="CSSLayout.zip" target="_blank">Zip File</a></td>
 </tr>
 </table>
 <h3>Create our layout - Fireworks</h3>

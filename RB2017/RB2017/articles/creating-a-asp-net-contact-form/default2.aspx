@@ -5,9 +5,13 @@
 </script>
 <h2>Creating a ASP.NET Contact Form (ASPX)</h2>
 <h3>Open the Web site in a browser</h3>
-<p>In order to see the results of our work, open your preferred web browser and navigate to a live website, such as http://www.&lt;yourwebsite&gt;.com/contact.aspx 
-Don't be concerned if the page doesn't load immediately. Since the ASP.NET environment compiles each web form into Dynamic Link Libraries (DLL), the first time you load a web form into a browser, it has to compile any code or control before it can render the page. However, as a result, since it's compiled, if there are no changes, subsequent requests for the page should speed up and no delay should be visible. Once your web page has rendered, to reiterate what the ASP.NET environment is doing, view the source of the page in your browser and you should see this:
+<p>In order to see the results of our work, press F5 to start up visual studio. 
+Don't be concerned if the page doesn't load immediately. Since the ASP.NET environment compiles each web form into Dynamic Link Libraries (DLL), 
+the first time you load a web form into a browser, it has to compile any code or control before it can render the page. 
+However, as a result, since it's compiled, if there are no changes, subsequent requests for the page should speed up and no delay should be visible. 
+Once your web page has rendered, to reiterate what the ASP.NET environment is doing, view the source of the page in your browser and you should see this:
 </p>
+<p class="alignCenter"><img src="images/view_source.png" width="459" height="222" alt="View Source" /></p>
 <p>As you can see from the example above, the ASP.NET environment has automatically replaced the text box web controls with ordinary HTML input tags for first and last name, as well as email, and has used the ID of the control as the value for the name attribute. Keep note of the view state tag circled in red above, we'll get to that later in the article. Since a comment field is generally thought to contain more text than an input tag, we use a text area tag instead. Let's go ahead and create the text area tag by modifying our file as shown below:</p>
 <pre><code>
 &lt;tr&gt;

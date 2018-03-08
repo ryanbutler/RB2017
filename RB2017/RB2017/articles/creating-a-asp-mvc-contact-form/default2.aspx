@@ -30,7 +30,7 @@ In the MVC paradigm, views are a special type of file that contain HTML 5 markup
 </ol>
 <p>Save your changes. </p>
 <p>From the contact screen, right-click, and choose View Source. In the source of the markup, you’ll see the changes as illustrated:</p>
-<p class="alignCenter"><a href="images/7.png" data-lightbox="image-7"><img src="thumbs/7.png" alt="View Source" width="260" height="38" /></a></p>
+<p class="alignCenter"><a href="images/view_browser.png" data-lightbox="image-7"><img src="thumbs/view_browser.png" alt="View Source" width="400" height="80" /></a></p>
 <h3>Adding model reference to contact.cshtml</h3>
 <p>For our form fields to bind the data entered to our model, we need to add a reference to our model from our razor web page. We do this by adding the following snippet to the top of our razor web page:</p>
 <pre><code>

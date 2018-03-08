@@ -48,7 +48,7 @@
 <div class="container">
 <!-- start #logo -->
 <div id="logo">
-<img src="/images/logo.png" alt="Ryan Butler.ws" width="338" height="72" />
+<a href="/default.aspx"><img src="/images/logo.png" alt="Ryan Butler.ws" width="338" height="72" /></a>
 </div>
 <!-- end #logo -->
 <div id="socials">

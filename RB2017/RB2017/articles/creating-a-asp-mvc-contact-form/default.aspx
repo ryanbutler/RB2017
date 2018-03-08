@@ -34,7 +34,7 @@
 </ol>
 <p>In the name, location and solution name text fields, choose the following:</p>
 <ol>
-<li>In the Name text field, type MvcContactForm</li>
+<li>In the Name text field, type AspMvcContactForm</li>
 <li>In the Location text field, choose a directory (the root of a directory works best)</li>
 <li>From the bottom right side of the screen, underneath the browse button, leave Create directory for solution checked</li>
 <li>Click OK</li>

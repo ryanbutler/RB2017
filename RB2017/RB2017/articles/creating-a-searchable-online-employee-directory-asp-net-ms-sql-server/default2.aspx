@@ -10,10 +10,11 @@
 <p>From the solution explorer, follow these steps:</p>
 <ol>
 <li>Right click the solution directory and choose Add:New Item.</li>
-<li>Select Class file.</li>
-<li>In the name text field, type "EmployeeDirectory.cs" and left click add.</li>
+<li>From the left pane, select code.</li>
+<li>From the right pane, select class.</li>
+<li>In the name text field, type EmployeeDirectory.cs and left click add.</li>
 </ol>
-<p>Double click EmployeeDirectory.cs from the solution explorer, which will show the empty class as shown below:</p>
+<p>With EmployeeDirectory.cs opened, it will an empty class as shown below:</p>
 <pre><code>
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,12 @@ namespace EmployeeDirectory
     }
 }
 </code></pre>
-<p>As you can see from the code above, we added three. The first allows us to work with stored procedures in ADO.NET, the second allows us to reference a connection key from our configuration file and the last allows us to connect to SQL Server.</p>
+<p>As you can see from the code above, we added three below System.Web. They are as follows:</p>
+<ol>
+<li>System.Data: allows us to work with stored procedures in ADO.NET</li>
+<li>System.Configuration: allows us to reference a connection key from our configuration file</li>
+<li>System.Data.SqlClient: allows us to connect to SQL Server</li>
+</ol>
 <h3>Creating Our Declarations</h3>
 <p>Let's first add class-level variables so that we can get or set our data. Add the following code:</p>
 <pre><code>
@@ -50,7 +56,8 @@ namespace EmployeeDirectory
 {
     public class EmployeeDirectory
     {
-  public string name { get; set; }
+        #region Declarations
+        public string name { get; set; }
         public string lname { get; set; }
         public string fname { get; set; }
         public Guid guid { get; set; }
@@ -58,6 +65,7 @@ namespace EmployeeDirectory
         public string officeloc { get; set; }
         public string phonenum { get; set; }
         public string jobtitle { get; set; }
+        #endregion
     }
 }
 </code></pre>
@@ -65,11 +73,10 @@ namespace EmployeeDirectory
 <h3>Creating Our Method</h3>
 <p>We know that our method in this class needs to accept an argument, which is a string from our search box. We also know this search could bring back one or multiple matches. As a result, our method needs to create and store a generic list object and then return that to our code-behind file. Let's add the following code:</p>
 <pre><code>
-#region Methods
-        
+        #region Methods
         public List&lt;EmployeeDirectory&gt;GetEmployeesView(string lastname)
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["mwd"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ed"].ConnectionString);
             SqlCommand cmd = new SqlCommand("spEmployeeDirectoryViewDetail", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlParameter parameterLName = new SqlParameter("@LName", SqlDbType.VarChar,50);
@@ -100,7 +107,7 @@ namespace EmployeeDirectory
             return employees;            
             
         }
-#endregion
+            #endregion
 </code></pre>
 <p>As you can see from the code above we do the following:</p>
 <ol>
@@ -163,9 +170,9 @@ namespace EmployeeDirectory
             TogglePHVisibility();
             rpEmployeeSearchView.DataSource = employees;
             rpEmployeeSearchView.DataBind();
-  }
-#endregion
-   }
+        }
+        #endregion
+    }
 }
 </code></pre>
 <p>As you can see from the code above, we create a generic list object named employees and set it to our object, ed. From our object, we call GetEmployeesView, passing in our search field. We call TogglePHVisibility, which shows our repeater control and hides the other placeholder control. When our list object gets filled with one or multiple objects, we set the data source of our repeater control to our list object and call the data bind method to associate the data to the control.</p>

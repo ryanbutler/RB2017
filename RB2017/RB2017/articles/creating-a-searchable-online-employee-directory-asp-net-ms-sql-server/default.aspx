@@ -92,12 +92,15 @@
 <li>GUID : leave empty</li>
 <li>JobTitle: Director</li>
 <li>Office Loc : 110</li>
-<li>PhoneNum : 2324</li>
 </ul>
 </li>
 </ol>
-<p>Enter a few more records with different information. After each record, make sure you press the execute button so you get a new GUID as shown in the image below:</p>
-<p class="alignCenter"><img src="images/EmployeeDirectoryASP.NET_Fig6.jpg" width="126" height="72" alt="Execute SQL" /></p>
+<p>Enter a few more records with different information. After each record, make sure you select Execute SQL 
+by choosing following these steps:</p>
+<ol>
+<li>From the main menu, choose Query Designer : Execute SQL</li>
+</ol>
+ <p>This will ensure you get a new GUID and the record is populated correctly.</p>
 <p>Minimize SQL Server Management Studio; we're done with it for the time being.</p>
 <h3>Open Visual Studio and Create the Project</h3>
 <p>Let's open Visual Studio from the desktop: Start:Programs:Microsoft Visual Studio. From the main menu, create a new project by following these steps:</p>
@@ -108,17 +111,34 @@
 <li>Leave Create a directory for solution checked.</li>
 <li>Click OK.</li>
 </ol>
-<p>Once the project is created, you'll have one ASPX file and a web.config.</p>
 <h3>Open web.config and default.aspx</h3>
-<p>From the solution explorer, double click web.config and look for &lt;connectionStrings&gt;. Replace the default markup with the following:</p>
+<p>From the solution explorer, double click web.config and look for &lt;configuration&gt;. Inside this tag, add the following markup:</p>
 <pre><code>
 &lt;connectionStrings&gt;
-&lt;add name="mwd" connectionString="Data Source=P425\SQLExpress;Initial Catalog=mwd;Integrated Security=SSPI;"/&gt;
+&lt;add name="ed" connectionString="Data Source=--replace with local db or remote host--;Initial Catalog=Emp_Dir;Integrated Security=SSPI;"/&gt;
 &lt;/connectionStrings&gt;
 </code></pre>
-<p>Simply replace the value inside the double quotes for connection string with your settings. When you are done, save your file.</p>
-<p>From the solution explorer, double click default.aspx and remove everything between the opening and closing &lt;form&gt; tags. Replace it with the following markup:</p>
+<p>Simply replace the data source with either your local database server name or your remote host. When you are done, save your file.</p>
+<h3>Working with default.aspx</h3>
+<p>From the solution explorer, delete the existing default.aspx file. Next, follow these steps to create a new
+default page: </p>
+<ol>
+<li>Right click the solution</li>
+<li>Choose Add New Item</li>
+<li>In the Add New Item window, from the left pane, choose Web, then Web Forms</li>
+<li>From the right pane, choose Web Form</li>
+<li>In the name text field, type default.aspx</li>
+<li>Click Add</li>
+</ol>
+<p>Modify the existing markup in the file with the following:</p>
 <pre><code>
+&lt;%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="EmployeeDirectory._default" %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head runat="server"&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
 &lt;form id="form1" runat="server"&gt;
 &lt;h2&gt;Employee Search&lt;/h2&gt;
 &lt;p&gt;Search an employee by typing a last name.&lt;/p&gt;
@@ -134,12 +154,16 @@
 &lt;p&gt;No Employee exists.&lt;/p&gt;
 &lt;/asp:PlaceHolder&gt;
 &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 <p>As you can see from the code above, we have the following:</p>
 <ol>
-<li>Heading three to identify the page</li>
+<li>Heading two to identify the page</li>
 <li>Server-side text box</li>
 <li>Button control</li>
+<li>Two place holder controls</li>
+<li>One repeater control</li>
 </ol>
 <p>Each control has an ID property value to uniquely identify it. Each one has a runat property value that tells us the control is run by the server first and then HTML output is sent to the browser. On the button, we have an OnClick attribute with a value of btnSearch_Click. OnClick is a server-side event, which means we must have a corresponding event in our code-behind file.</p>
 <p>Before doing that, you will also see a placeholder control (with its visibility set to false) with a repeater control inside. Inside the repeater control, we use a hyperlink control. In that control, we use the NavigateUrl property -- passing in the Web page that will view additional employee detail -- and use the Text property and pass in Name, which is coming from our stored procedure query (more on this query shortly).</p>
@@ -152,8 +176,7 @@ protected void btnSearch_Click(object s, EventArgs e)
 </code></pre>
 <p>Save your file.</p>
 <h3>Run the Project</h3>
-<p>When we initially run the project, you'll see this window:</p>
-<p class="alignCenter"><img src="images/EmployeeDirectoryASP.NET_Fig7.jpg" width="494" height="234" alt="Debugging Not Enabled" />
-<p>Click OK. Because we have no functionality yet, you should just see the initial screen. When finished, return to Visual Studio and press the stop button.</p>
+<p>You should see the employee search screen with a text field and a search button screen. Because we have no functionality yet,
+clicking the search button does nothing. When finished, return to Visual Studio and press the stop button.</p>
 <p>We'll continue by implementing the search functionality <a href="default2.aspx">next</a>.</p>
 </asp:Content>

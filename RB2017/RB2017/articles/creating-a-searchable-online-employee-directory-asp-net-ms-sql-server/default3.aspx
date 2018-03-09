@@ -7,7 +7,7 @@
 <h3>Create the Stored Procedure for Employee Directory</h3>
 <p>If you still have the database on your task menu, simply restore it. From the object explorer, follow these steps to create the procedure for searching employees:</p>
 <ol>
-<li>Expand the plus sign (+) next to our database, ed.</li>
+<li>Expand the plus sign (+) next to our database, Emp_Dir.</li>
 <li>Expand the plus sign (+) next to programmability.</li>
 <li>Expand the plus sign (+) next to stored procedures.</li>
 <li>Right click on stored procedures and select new stored procedure.</li>

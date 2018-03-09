@@ -7,6 +7,14 @@
 <p>When working for a large company, it's hard to know everyone's name, job title, room location and contact information such as phone number or email address. Most companies rely on a spreadsheet of employee names that becomes outdated as soon as the sheet is printed. Most solutions to this problem rely on a Web-based approach. One solution could be posting a PDF file or Excel file to an internal intranet, but the same maintenance pain point exist: every time a change is needed, you have to re-upload the document.</p>
 <p>A solution that is more flexible and robust to changes is a Web page that's capable of searching a database of employee names. When an employee is found, his or her name is displayed in a hyperlink that provides further information when clicked. As a developer, if you're familiar with ASP.NET and database-driven pages, this solution is quite simple to implement.</p>
 <p>In this article I'll explain how to create a database, create one page that will search for any employee with the specified name or letter, and create another page that will display additional details regarding that employee. To follow along with this article, you'll need Visual Studio, as well as SQL Server.</p>
+<table class="articles" summary="project files">
+<tr>
+<td colspan="2" class="header">Download Project Files </td>
+</tr>
+<tr>
+<td colspan="2" class="caption"><a href="https://github.com/ryanbutler/EmployeeDirectory" target="_blank">Source Files</a></td>
+</tr>
+</table>
 <h3>Create the Database</h3>
 <p>From the desktop, follow these steps to open SQL Server:</p>
 <ol>

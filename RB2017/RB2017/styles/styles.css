@@ -485,13 +485,22 @@ a:hover, a:active, a:focus {
 	text-decoration:none;
 }
 
+/*css rules for define_Db_Table*/
+table.define_Db_Table{
+    width:600px;
+    margin:0 auto;
+    border:1px solid #000;
+}
+
+table.define_Db_Table td{
+    border:1px solid #000;
+}
+
 /* #Media Queries
 ================================================== */
-
-	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {
-	
-	#portfolio-list {width: 780px}
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    #portfolio-list {width: 780px}
 	
 	}
 

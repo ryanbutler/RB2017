@@ -8,9 +8,10 @@
 </head>
 <body>
 <form id="form1" runat="server">
+<p><a href="add-article.aspx">Add Article</a></p>
 <asp:Repeater ID="rpArticlesView" runat="server">
 <ItemTemplate>
-<p><asp:HyperLink ID="hlLink" runat="server" NavigateUrl='<%#Eval("Guid", "view-detail.aspx?guid={0}") %>' Text='<%#Eval("Article_Name") %>' /></p>
+<p><asp:HyperLink ID="hlLink" runat="server" NavigateUrl='<%#Eval("Guid", "edit-article.aspx?guid={0}") %>' Text='<%#Eval("Article_Name") %>' /></p>
 </ItemTemplate>
 </asp:Repeater>        
 </form>

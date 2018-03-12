@@ -26,7 +26,7 @@ namespace RB2017.account
             Guid myguid;
             if (Guid.TryParse(Request.QueryString["guid"].ToString(), out myguid))
             {
-                List<Article> viewEditArticle = Article.ViewEditArticle(myguid);
+                List<Article> viewEditArticle = Article.ViewEditArticleName(myguid);
                 articleNameTB.Text = viewEditArticle[0].Article_Name.ToString();
             }
         }

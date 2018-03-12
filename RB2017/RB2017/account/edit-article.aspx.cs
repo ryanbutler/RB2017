@@ -32,7 +32,7 @@ namespace RB2017.account
         }
         protected void Update_Article(object sender, EventArgs e)
         {
-                Page_Load(sender, e);
+            UpdateData();
         }
 
         protected void UpdateData()

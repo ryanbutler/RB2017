@@ -73,10 +73,10 @@ namespace RB2017.account.BO
                 return articles;
             }
 
-            public static List<Article> ViewEditArticle(Guid guid)
+            public static List<Article> ViewEditArticleName(Guid guid)
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["rb"].ConnectionString);
-                SqlCommand cmd = new SqlCommand("spViewEditArticle", conn);
+                SqlCommand cmd = new SqlCommand("spViewArticleName", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter parameterUniqueGuid = new SqlParameter("@Guid", SqlDbType.UniqueIdentifier, 36);
                 parameterUniqueGuid.Value = guid;

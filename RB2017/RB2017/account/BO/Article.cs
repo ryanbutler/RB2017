@@ -45,7 +45,7 @@ namespace RB2017.account.BO
             public List<Article> ViewArticles()
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["rb"].ConnectionString);
-                SqlCommand cmd = new SqlCommand("spArticles", conn);
+                SqlCommand cmd = new SqlCommand("spArticleList", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 List<Article> articles = new List<Article>();
 
@@ -73,24 +73,24 @@ namespace RB2017.account.BO
                 return articles;
             }
 
-            public static List<Article> ViewArticle(Guid guid)
+            public static List<Article> ViewEditArticle(Guid guid)
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["rb"].ConnectionString);
-                SqlCommand cmd = new SqlCommand("spViewArticle", conn);
+                SqlCommand cmd = new SqlCommand("spViewEditArticle", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter parameterUniqueGuid = new SqlParameter("@Guid", SqlDbType.UniqueIdentifier, 36);
                 parameterUniqueGuid.Value = guid;
                 cmd.Parameters.Add(parameterUniqueGuid);
-                List<Article> viewArticle = new List<Article>();
+                List<Article> articles = new List<Article>();
                 try
                 {
                     conn.Open();
                     SqlDataReader rdr = cmd.ExecuteReader();
-                    while (rdr.Read())
+                    if (rdr.Read())
                     {
                         Article a = new Article();
                         a.Article_Name = rdr["Article_Name"].ToString();
-                        viewArticle.Add(a);
+                        articles.Add(a);
                     }
                 }
                 catch (Exception e)
@@ -102,8 +102,37 @@ namespace RB2017.account.BO
                     cmd.Dispose();
                     conn.Close();
                 }
-                return viewArticle;
+                return articles;
             }
+
+            public void UpdateArticleName(Guid guid)
+            {
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["rb"].ConnectionString);
+                SqlCommand cmd = new SqlCommand("spUpdateArticleName", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter parameterUniqueGuid = new SqlParameter("@Guid", SqlDbType.UniqueIdentifier, 36);
+                SqlParameter parameterArticleName = new SqlParameter("@Article_Name", SqlDbType.VarChar, 100);
+                parameterUniqueGuid.Value = guid;
+                parameterArticleName.Value = Article_Name;
+                cmd.Parameters.Add(parameterArticleName);
+                cmd.Parameters.Add(parameterUniqueGuid);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch(Exception e)
+                {
+                    throw new Exception(e.Message.ToString());
+                
+                }finally
+                {
+
+                cmd.Dispose();
+                conn.Close();
+            }
+        }
             #endregion
 
         }

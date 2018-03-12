@@ -37,51 +37,48 @@
 </ol>
 <p class="alignCenter"><img src="images/EmployeeDirectoryASP.NET_Fig2.jpg" width="198" height="84" alt="New Table" /></p>
 <p>Let's create our table, employeedirectory, first. We need the following columns as outlined below:</p>
-<ol>
-<li>ID
-<ul>
-<li>Primary key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>FName
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>LName
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>Email
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>GUID
-<ul>
-<li>Data type: uniqueidentifier</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>JobTitle
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>OfficeLoc
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-</ol>
+<table class="define_Db_Table">
+<tr>
+<td>Column Name</td>
+<td>Data Type</td>
+<td>Null/Not Null</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Int</td>
+<td>Not null</td>
+</tr>
+<tr>
+<td>FName</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+</tr>
+<tr>
+<td>LName</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+</tr>
+<tr>
+<td>Guid</td>
+<td>Uniqueidentifier</td>
+<td>Not null</td>
+</tr>
+<tr>
+<td>JobTitle</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+</tr>
+<tr>
+<td>OfficeLoc</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+</tr>
+</table>
 <p>Before continuing, make sure to set the primary key by right clicking the column (ID) and choosing Set Primary Key as shown below:</p>
 <p class="alignCenter"><img src="images/EmployeeDirectoryASP.NET_Fig4.gif" width="210" height="51" alt="Set Primary Key" /></p>
 <p>While we're at it, let's set the seed on this column as well by setting Identity Specification to Yes as shown below:</p>

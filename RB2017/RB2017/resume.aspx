@@ -13,7 +13,7 @@
 <h3>Test Automation Engineer</h3>
 </div>
 <div class='two columns omega'>
-<div>2013 - </div>
+<div>2013 - Present</div>
 </div>
 </div>
 <h4>Jack Henry &amp; Associates, Inc.</h4>

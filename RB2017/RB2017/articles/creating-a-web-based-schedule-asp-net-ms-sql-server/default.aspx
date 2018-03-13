@@ -10,6 +10,14 @@
 </p>
 <p>As one can imagine, developing a Web-based application such as this one with ASP.NET and SQL Server is relatively simple. If you would like to learn how to build an application like this, please follow along. You'll need Visual Studio and SQL Server.
 </p>
+<table class="articles" summary="project files">
+<tr>
+<td colspan="2" class="header">Download Project Files </td>
+</tr>
+<tr>
+<td colspan="2" class="caption"><a href="https://github.com/ryanbutler/ClassSchedule" target="_blank">Source Files</a></td>
+</tr>
+</table>
 <h3>Create the Database</h3>
 <p>From the desktop, follow these steps to open SQL Server:</p>
 <ol>

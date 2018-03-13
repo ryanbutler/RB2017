@@ -21,7 +21,7 @@
 <p><a href="articles/creating-a-searchable-online-employee-directory-asp-net-ms-sql-server/default.aspx">Creating a Searchable Online Employee Directory with ASP.NET and MS SQL Server</a></p>
 <%--<p><a href="articles/creating-a-human-resources-application-asp-net-ms-sql-server/default.aspx">Creating a Human Resources Application with ASP.NET and MS SQL Server</a></p>--%>
 <%--<p><a href="articles/creating-a-audit-record-application-asp-net-ms-sql-server/default.aspx">Creating an Audit Record Application with ASP.NET and MS SQL Server</a></p>--%>
-<%--<p><a href="articles/creating-a-web-based-schedule-asp-net-ms-sql-server/default.aspx">Creating a Web-based Schedule with ASP.NET and MS SQL Server Server</a></p>--%>
+<p><a href="articles/creating-a-web-based-schedule-asp-net-ms-sql-server/default.aspx">Creating a Web-based Schedule with ASP.NET and MS SQL Server Server</a></p>
 <%--<p><a href="articles/sending-a-html-and-plain-text-e-newsletter-asp-net-part-2/default.aspx">Sending an HTML and Plain Text E-newsletter with ASP.NET, Part 2</a></p>--%>
 <%--<p><a href="articles/creating-a-e-newsletter-signup-system-asp-net-ms-sql-server/default.aspx">Creating an E-newsletter Signup System with ASP.NET and MS SQL Server</a></p>--%>
 <%--<p><a href="articles/creating-a-help-desk-web-application-asp-net-ms-sql-server/default.aspx">Creating a Help Desk Web Application Using ASP.NET and MS SQL Server</a></p>--%>

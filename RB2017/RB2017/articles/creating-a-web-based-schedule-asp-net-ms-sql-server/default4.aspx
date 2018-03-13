@@ -14,14 +14,14 @@
 <h3>Create the Stored Procedure for Class Schedule</h3>
 <p>From the object explorer, follow these steps to create the procedure for class schedule:</p>
 <ol>
-<li>Expand the plus sign (+) next to our database, mwd.</li>
+<li>Expand the plus sign (+) next to our database, WebBasedSchedule.</li>
 <li>Expand the plus sign (+) next to programmability.</li>
 <li>Expand the plus sign (+) next to stored procedures.</li>
 <li>Right click on stored procedures and select new stored procedure.</li>
 </ol>
 <p>Modify the generated code, with the following as shown below:</p>
 <pre><code>
-use mwd
+use WebBasedSchedule
 -- ================================================
 -- Template generated from Template Explorer using:
 -- Create Procedure (New Menu).SQL
@@ -84,18 +84,28 @@ GO
 </ol>
 <p>Once the project is created, you'll have one ASPX file and a web.config.</p>
 <h3>Open web.config</h3>
-<p>From the solution explorer, double click web.config and look for &lt;connectionStrings&gt;. Replace the default markup with the following as shown below:</p>
+<p>From the solution explorer, double click web.config and look for &lt;configuration&gt;. Inside this tag, add the following markup:</p>
 <pre><code>
 &lt;connectionStrings&gt;
-&lt;add name="mwd" connectionString="Data Source=P425\SQLExpress;Initial Catalog=mwd;Integrated Security=SSPI;"/&gt;
+&lt;add name="class_schedule" connectionString="Data Source=--replace with local db or remote host--;Initial Catalog=WebBasedSchedule;Integrated Security=SSPI;"/&gt;
 &lt;/connectionStrings&gt;
 </code></pre>
-<p>Simply replace the value inside the double quotes for connection string with your settings. Once completed, save your file.</p>
+<p>Simply replace the data source with either your local database server name or your remote host. When you are done, save your file.</p>
 <h3>Open default.aspx</h3>
-<p>Let's tackle the ASPX file first by double clicking on it from the solution explorer. Once open, delete everything inside the opening and closing &lt;form runat= "server"&gt; tag. Next, right below the opening &lt;form&gt; tag, let's create a grid view data control as shown below:</p>
+<p>From the solution explorer, delete the existing default.aspx file. Next, follow these steps to create a new
+default page: </p>
+<ol>
+<li>Right click the solution</li>
+<li>Choose Add New Item</li>
+<li>In the Add New Item window, from the left pane, choose Web, then Web Forms</li>
+<li>From the right pane, choose Web Form</li>
+<li>In the name text field, type default.aspx</li>
+<li>Click Add</li>
+</ol>
+<p>Modify the existing markup inside &lt;form runat="server"&gt; with the following:</p>
 <pre><code>
 &lt;asp:GridView ID="gridView_Schedule" runat="server"&gt;
-&lt;/&lt;asp:GridView&gt;
+&lt;/asp:GridView&gt;
 </code></pre>
 <p>Since we need to create a tabular view of our data, grid view control will render a table. Right now the properties are as follows:</p>
 <ol>

@@ -6,6 +6,7 @@
 <h2>Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Populating Tables</h3>
 <p>Let's go ahead and populate our tables with some data by following these steps:</p>
+<p></p>
 <ol>
 <li>Right click on Instructor, and select Open</li>
 <li>Enter the following data:
@@ -22,12 +23,10 @@
 <li>InstLName : Brand</li>
 </ul>
 </li>
-<li>
+<li>Record 3
 <ul>
 <li>InstFName : Tom</li>
 <li>InstLname : Stewart</li>
-</ul>
-</li>
 </ul>
 </li>
 </ol>
@@ -45,6 +44,8 @@
 <li>Location: LEG</li>
 </ul>
 </li>
+<li>Record 3
+<ul>
 <li>Location: RVC</li>
 </ul>
 </li>
@@ -56,6 +57,7 @@
 <li>Record 1
 <ul>
 <li>Room: TEC-104</li>
+</ul>
 <li>Record 2
 <ul>
 <li>Room: RVC-230</li>
@@ -64,8 +66,6 @@
 <li>Record 3
 <ul>
 <li>Room: SPG-123</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

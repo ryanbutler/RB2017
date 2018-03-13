@@ -30,16 +30,15 @@ protected void Page_Load(object sender, EventArgs e)
             GetClassScheduleData();
         }
 </code></pre>
-<p>Save your file. Press F5 on your keyboard. If this is the first time running the project, you'll get the following message:</p>
-<p class="alignCenter"><img src="images/ClassSchedule_ASP.NET_Fig12.jpg" width="494" height="234" alt="Debugging Not Enabled" /></p>
-<p>Go ahead and click OK. Make sure your page looks like the following image:</p>
+<p>Save your file. Press F5 on your keyboard. Go ahead and click OK. Make sure your page looks like the following image:</p>
 <p class="alignCenter"><img src="images/ClassSchedule_ASP.NET_Fig13.jpg" width="600" height="450" alt="Browser view of class schedules" /></p>
 <p>Once you're done previewing your page, return to Visual Studio and press the stop button or Shift + F6 on your keyboard.</p>
 <h3>Create the Style Sheet</h3>
 <p>We obviously need to style up the page a bit, let's do it with CSS; follow these steps to create a style sheet:</p>
 <ol>
 <li>From the solution explorer, right click on the project and choose Add→New Item.</li>
-<li>In the Add New Item window, select style sheet.</li>
+<li>In the Add New Item window, from the left pane, select Web.</li>
+<li>From the right pane, choose Style Sheet</li>
 <li>In the name text field, type style and then left click Add.</li>
 </ol>
 <h3>Open the Style Sheet</h3>
@@ -67,7 +66,10 @@ div table#gridView_Schedule td{
       text-align:center;
 }
 </code></pre>
-<p>As you can see from the code above, we're overriding the base font family for our Web page, setting the overall table width to 985, which allows the table to show all information consistently, and we set the font size of our table header cells (th) and table cells (td) to an appropriate size. Save your file and preview the results. Once finished, close your style sheet.</p>
+<p>As you can see from the code above, we're overriding the base font family for our Web page, setting the overall table width to 985, which allows the table to 
+show all information consistently, and we set the font size of our table header cells (th) and table cells (td) to an appropriate size. 
+Save your file and preview the results. Once finished, close your style sheet.</p>
+<p>Before continuing, in the default.aspx make sure you link to the style sheet.</p>
 <h3>Determining Rows to Highlight</h3>
 <p>Most Web-based schedules have indicators that alert viewers to classes that are full or have lab components by highlighting those rows in different colors. Using our grid view, this is pretty simple. First, in default.aspx, inside the opening grid view declaration, add this property-value:</p>
 <pre><code>

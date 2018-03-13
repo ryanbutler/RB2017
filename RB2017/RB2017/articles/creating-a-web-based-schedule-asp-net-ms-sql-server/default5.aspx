@@ -8,7 +8,8 @@
 <p>We have two options for getting data bound to our grid view: (1) put all the database and business logic in our default.aspx.cs file, or (2) create a separate class file, put all the database and business logic in this file, and then bind to the list object it returns in our default.aspx.cs file. Our second option is the best, it creates a layer of abstraction to our application, and if it's ever needed, we could compile that class as a namespace and allow another developer to use it. As a result, we'll go with the second option. Follow these steps to create our class file:</p>
 <ol>
 <li>From the solution explorer, right click and select Add:New Item.</li>
-<li>In the Add New Item window, select Class.</li>
+<li>In the Add New Item window, from the left pane, select Code.</li>
+<li>From the right pane, select Class</li>
 <li>In the name text field, type ClassSchedule and left click Add.</li>
 </ol>
 <h3>Open ClassSchedule.cs</h3>
@@ -22,7 +23,12 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 </code></pre>
-<p>As you can see from the code above, we added three namespaces. The first one is to access our web.config connection key, the second is to work with stored procedures, and the third is to work with SQL server. Continuing, inside the initial declaration for our class, add the following declarations as shown below:</p>
+<p>As you can see from the code above, we added three below System.Web. They are as follows:</p>
+<ol>
+<li>System.Data: allows us to work with stored procedures in ADO.NET</li>
+<li>System.Configuration: allows us to reference a connection key from our configuration file</li>
+<li>System.Data.SqlClient: allows us to connect to SQL Server</li>
+</ol>
 <pre><code>
 namespace ClassSchedule
 {
@@ -34,12 +40,12 @@ namespace ClassSchedule
         public int credhrs{get;set;}
         public string title{get;set;}
         public int totalSeats{get;set;}      
-     public int remainSeats{get;set;}
+        public int remainSeats{get;set;}
         public string meetInfo{get;set;}
         public string room{get;set;}      
         public string days{get;set;}      
-     public string startTime{get;set;}
-     public string endTime{get;set;}
+        public string startTime{get;set;}
+        public string endTime{get;set;}
         public string instFullName{get;set;}
         public string location{get;set;}
         #endregion
@@ -58,19 +64,19 @@ namespace ClassSchedule
         public int credhrs{get;set;}
         public string title{get;set;}
         public int totalSeats{get;set;}      
-     public int remainSeats{get;set;}
+        public int remainSeats{get;set;}
         public string meetInfo{get;set;}
         public string room{get;set;}      
         public string days{get;set;}      
-     public string startTime{get;set;}
-     public string endTime{get;set;}
+        public string startTime{get;set;}
+        public string endTime{get;set;}
         public string instFullName{get;set;}
         public string location{get;set;}
         #endregion
         #region Methods
         public static List&lt;ClassSchedule&gt; GetClassScheduleData()
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["mwd"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["class_schedule"].ConnectionString);
             SqlCommand cmd = new SqlCommand("spClassScheduleDisplay", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             List&lt;ClassSchedule&gt; schedule = new List&lt;ClassSchedule&gt;();

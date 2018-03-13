@@ -5,83 +5,104 @@
 </script>
 <h2>Creating a web - based schedule with ASP.NET (ASPX) and MS SQL Server</h2>
 <h3>Create Child Tables</h3>
-<p>We'll explain why we need four additional tables shortly, but let's go ahead and create the section name, room, location and instructors table using the same steps as outlined above, just change column names as outlined below:</p>
+<p>We'll explain why we need four additional tables shortly, but let's go ahead and create the section name, room, location and instructors 
+table using the same steps as class schedule, just change column names as outlined below:</p>
 <h3>SectionName</h3>
-<ol>
-<li>ID
-<ul>
-<li>Primary Key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>SectionName
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>Synonym
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-</ol>
+<table class="define_Db_Table">
+<tr>
+<td>Column Name</td>
+<td>Data Type</td>
+<td>Not null/null</td>
+<td>Primary Key</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Int</td>
+<td>Not null</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>SectionName</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Synonym</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+</table>
 <h3>Room</h3>
-<ol>
-<li>ID
-<ul>
-<li>Primary key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>Room
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-</ol>
+<table class="define_Db_Table">
+<tr>
+<td>Column Name</td>
+<td>Data Type</td>
+<td>Not null/null</td>
+<td>Primary Key</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Int</td>
+<td>Not null</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Room</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+</table>
 <h3>Location</h3>
-<ol>
-<li>ID
-<ul>
-<li>Primary key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>Location
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-</ol>
+<table class="define_Db_Table">
+<tr>
+<td>Column Name</td>
+<td>Data Type</td>
+<td>Not null/null</td>
+<td>Primary Key</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Int</td>
+<td>Not null</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+</table>
 <h3>Instructor</h3>
-<ol>
-<li>ID
-<ul>
-<li>Primary key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>InstFName
-<ul>
-<li>Data type: varchar(50) </li>
-<li>Null</li>
-</ul>
-</li>
-<li>InstLName
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-</ol>
+<table class="define_Db_Table">
+<tr>
+<td>Column Name</td>
+<td>Data Type</td>
+<td>Not null/null</td>
+<td>Primary Key</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Int</td>
+<td>Not null</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstFName</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>InstLName</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+</table>
 <p>Make sure you set the primary key and seed on the ID columns for these tables as well.</p>
 <h3>Relational Databases</h3>
 <p>When learning about databases, one of the toughest concepts to understand is the idea behind relationships in data. In relational databases you don't want to duplicate data, and you especially don't want to leave your database vulnerable to scalability or maintenance issues. We get around this through relating our data to other tables. This way, you don't duplicate data and your database remains scalable and the maintenance pain point is usually reduced.</p>
@@ -117,6 +138,5 @@
 <ol>
 <li>Repeat this process for instructor, location, and room choosing appropriate column names where appropriate.</li>
 <li>In the database diagram window, press Ctrl + S and give your diagram a name, such as class schedule.</li>
-</ol>
-<p>We'll continue by populating the tables <a href="default3.aspx">next</a>.</p>
+</ol><p>We'll continue by populating the tables <a href="default3.aspx">next</a>.</p>
 </asp:Content>

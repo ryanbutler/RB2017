@@ -23,7 +23,7 @@
 </ol>
 <p class="alignCenter"><img src="images/ClassSchedule_ASP.NET_Fig1.jpg" width="338" height="68" alt="New Database" /></p>
 <ol>
-<li>Give your database a name of mwd and click OK</li>
+<li>Give your database a name of WebBasedSchedule and click OK</li>
 </ol>
 <h3>Create the Main Table</h3>
 <ol>
@@ -35,97 +35,92 @@
 </ol>
 <p class="alignCenter"><img src="images/ClassSchedule_ASP.NET_Fig3.jpg" width="262" height="136" alt="New Table" /></p>
 <p>Let's create the main table classschedule first. We need the following columns as outlined below:</p>
-<ol>
-<li>ID
-<ul>
-<li>Primary key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>SectionNameId
-<ul>
-<li>Foreign key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>SynonymID
-<ul>
-<li>Data type: int</li>
-<li>Null</li>
-</ul>
-</li>
-<li>CreditHrs
-<ul>
-<li>Data type:int</li>
-<li>Null</li>
-</ul>
-</li>
-<li>Title
-<ul>
-<li>Data type: varchar(50) </li>
-<li>Null</li>
-</ul>
-</li>
-<li>TotalSeats
-<ul>
-<li>Data type: int</li>
-<li>Null</li>
-</ul>
-</li>
-<li>RemainingSeats
-<ul>
-<li>Data type: int</li>
-<li>Null</li>
-</ul>
-</li>
-<li>MeetInformation
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>RoomNumberID
-<ul>
-<li>Foreign key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>Days
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>StartTime
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>EndTime
-<ul>
-<li>Data type: varchar(50)</li>
-<li>Null</li>
-</ul>
-</li>
-<li>InstructorID
-<ul>
-<li>Foreign key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-<li>LocationID
-<ul>
-<li>Foreign key</li>
-<li>Data type: int</li>
-<li>Not null</li>
-</ul>
-</li>
-</ol>
+<table class="define_Db_Table">
+<tr>
+<td>Column Name</td>
+<td>Data Type</td>
+<td>Not null/Null</td>
+<td>Foreign Key</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Int</td>
+<td>Not null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>SectionNameId</td>
+<td>Int</td>
+<td>Not null</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>CreditHrs</td>
+<td>Int</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>TotalSeats</td>
+<td>Int</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>RemainingSeats</td>
+<td>Int</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>MeetInformation</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>RoomNumberID</td>
+<td>Int</td>
+<td>Not null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Days</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>StartTime</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>EndTime</td>
+<td>Varchar(50)</td>
+<td>Null</td>
+<td>No</td>
+</tr>
+<tr>
+<td>InstructorID</td>
+<td>Int</td>
+<td>Not null</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>LocationID</td>
+<td>Int</td>
+<td>Not null</td>
+<td>Yes</td>
+</tr>
+</table>
 <p>Before continuing, make sure to set the primary key by right clicking the column (ID) and choosing primary key as shown below:</p>
 <p class="alignCenter"><img src="images/ClassSchedule_ASP.NET_Fig4.gif" width="210" height="51" alt="Set Primary Key" /></p>
 <p>While we're at it, let's set the seed on this column as well by setting Identity Specification to Yes as shown below:</p>

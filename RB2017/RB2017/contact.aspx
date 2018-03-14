@@ -61,7 +61,8 @@
 </tr>
 <tr>
 <td colspan="2"><asp:Button ID="btnSubmit" OnClick="Send_Mail" runat="server" Text="Submit" />
-<asp:Button ID="btnReset" OnClientClick="this.form.reset();return false;" runat="server" Text="Reset" /></td>
+<input type="reset" value="Reset" />
+</td>
 </tr>
 </table>
 </form>

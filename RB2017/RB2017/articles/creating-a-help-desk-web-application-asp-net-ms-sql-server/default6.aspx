@@ -224,7 +224,14 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 </code></pre>
 <p>As you can see from the code above, we set each of our help desk object properties to the appropriate values of our controls from our default.aspx page. Once we have that information, we call the save method, and then we toggle the visibility of our controls.</p>
 <h3>Test Drive the Application</h3>
-<p>From Visual Studio, click the green arrow button (F5) to run the project. Type data into the text fields, pick optons from the dropdown lists, and press submit. If everything works correctly, you should have a new record in the help desk table.</p>
+<p>From Visual Studio, click the green arrow button (F5) to run the project. 
+Type data into the text fields, pick optons from the dropdown lists, and press submit. 
+If everything works correctly, you should have a new record in the help desk table.</p>
+<h3>Insertion of foreign key records in parent table</h3>
+<p>This is the first time when looking at the help desk table, you'll see foreign key values in a parent table.
+This is the preferred way of normalizing our parent table help desk. If for some reason our severity, department or status
+needs to be modified we do it in the parent table, and then the foreign key value will automatically update in our help desk
+table.</p>
 <h3>Summary</h3>
 <p>In this article you learned how to build a relatively simple help desk application in ASP.NET and along the way learned how to do the following:</p>
 <ol>

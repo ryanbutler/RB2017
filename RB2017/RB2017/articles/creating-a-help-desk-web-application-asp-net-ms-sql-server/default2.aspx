@@ -18,7 +18,7 @@
 <li>You enforce referential integrity of the records, ensuring that a deletion from department or employee doesn't adversely affect any records in help desk.</li>
 </ol>
 <p>Figure 1 offers an illustration to help visualize the relationships in the data.</p>
-<p class="alignCenter"><img src="images/HelpDeskRelationships.jpg" width="672" height="373" alt="Help Desk Relationships" /></p>
+<p class="alignCenter"><img src="images/diagram.png" width="672" height="270" alt="Help Desk Relationships" /></p>
 <h3>Create a Database Diagram</h3>
 <p>In order to enforce referential integrity on our database, let's create a database diagram by following these steps:</p>
 <ol>
@@ -28,13 +28,13 @@
 <ol>
 <li>In the Add table window, select severity, department, employee and status, and click Add as shown below: </li>
 </ol>
-<p class="alignCenter"><img src="images/AddTableWindow.jpg" width="402" height="326" alt="Add Table Window" /></p>
+<p class="alignCenter"><img src="images/add_tables.png" width="464" height="365" alt="Add Table Window" /></p>
 <p>Place the help desk table in the middle with status in the top left, department in the bottom left, severity in the top right, and employee in the bottom right as shown in the previous section.</p>
 <p>Next, proceed with these steps:</p>
 <ol>
 <li>Left click the ID column in status and drag it to the status ID column in help desk. In the window that pops up, make sure your settings are as shown in Figure 2 and then click OK. </li>
 </ol>
-<p class="alignCenter"><img src="images/StatusID_HelpDesk.jpg" width="456" height="354" alt="Status ID Column" /></p>
+<p class="alignCenter"><img src="images/relationships.png" width="528" height="399" alt="Status ID Column" /></p>
 <ol>
 <li>Repeat this process for department, severity and employee, choosing appropriate column names.</li>
 <li>In the database diagram window, press Ctrl + S and give your diagram a name, such as help desk.</li>
@@ -50,29 +50,12 @@
 <li>High</li>
 </ul>
 </li>
-<li>Right click on employee and select Open.</li>
-<li>Enter the following data:
-<ul>
-<li>Record 1
-<ul>
-<li>FName : Jeff</li>
-<li>LName :  Jones</li>
-</ul>
-</li>
-<li>Record 2
-<ul>
-<li>FName> Monty</li>
-<li>LName>Python</li>
-</ul>
-</li>
-</ul>
-</li>
 <li>Right click on department and select Open.</li>
 <li>Enter the following data: 
 <ul>
-<li>IT  Development</li>
-<li>IT  Support</li>
-<li>IT  Database</li>
+<li>Information Services</li>
+<li>Networking</li>
+<li>Human Resources</li>
 </ul>
 </li>
 <li>Right click on status and select Open.</li>
@@ -93,27 +76,38 @@
 <li>In the name text box, name our project HelpDesk.</li>
 <li>Leave Create a directory for solution checked.</li>
 <li>Click OK.</li>
+<li>In the dialog that follows, choose Web Forms, and click Ok</li>
 </ol>
 <h3>Open web.config</h3>
-<p>From the Solution Explorer, double click web.config and look for &lt;connectionStrings&gt;. Replace the default markup with the following:</p>
+<p>From the solution explorer, double click web.config and look for &lt;configuration&gt;. Inside this tag, add the following markup:</p>
 <pre><code>
 &lt;connectionStrings&gt;
-&lt;add name="mwd" connectionString="Data Source=P425\SQLExpress;Initial Catalog=HelpDesk;Integrated Security=SSPI;"/&gt;
-&lt;/&lt;connectionStrings&gt;
+&lt;add name="hd" connectionString="Data Source=--replace with local db or remote host--;Initial Catalog=HelpDesk;Integrated Security=SSPI;"/&gt;
+&lt;/connectionStrings&gt;
 </code></pre>
-<p>Simply replace the value inside the double quotes for connectionString with your settings. When you are done, save your file.</p>
-<h3>Open default.aspx</h3>
-<p>From the Solution Explorer, double click default.aspx and replace everything inside the opening and closing &lt;form runat="server"&gt; tag with this:</p>
+<p>Simply replace the data source with either your local database server name or your remote host. When you are done, save your file.</p>
+<h3>Working with default.aspx</h3>
+<p>From the solution explorer, delete the existing default.aspx file. Next, follow these steps to create a new
+default page: </p>
+<ol>
+<li>Right click the solution</li>
+<li>Choose Add New Item</li>
+<li>In the Add New Item window, from the left pane, choose Web, then Web Forms</li>
+<li>From the right pane, choose Web Form</li>
+<li>In the name text field, type default.aspx</li>
+<li>Click Add</li>
+</ol>
+<p>Modify the existing markup inside &lt;form runat="server"&gt; with the following:</p>
 <pre><code>
 &lt;body&gt;
-&lt;asp:PlaceHolder ID="phForm" runat="server" Visible="true"&gt;
 &lt;form id="form1" runat="server"&gt;
-&lt;/form&gt;
+&lt;asp:PlaceHolder ID="phForm" runat="server" Visible="true"&gt;
 &lt;/asp:PlaceHolder&gt;
 &lt;asp:PlaceHolder ID="phSuccess" runat="server" Visible="false"&gt;
 &lt;p&gt;Ticket submitted successfully.&lt;/p&gt;
 &lt;p&gt;&lt;a href="Default.aspx"&gt;Submit another ticket&lt;/a&gt;&lt;/p&gt;
 &lt;/asp:PlaceHolder&gt;
+&lt;/form&gt;
 &lt;/body&gt;
 </code></pre>
 <p>As you can see from the code above, we nested two placeholder controls inside our form tag. A placeholder control is identical to any other ASP.NET control in that it's run on the server side. The only difference is whether it will show or hide the content inside. The control is made up of the following:</p>

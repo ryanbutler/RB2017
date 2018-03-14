@@ -28,14 +28,14 @@
 <h3>Create the Stored Procedure for Severities</h3>
 <p>If you still have the database on your task menu, simply restore it. From the Object Explorer, follow these steps to create the procedure for severity:</p>
 <ol>
-<li>Expand the plus sign (+) next to our database, mwd.</li>
+<li>Expand the plus sign (+) next to our database, HelpDesk.</li>
 <li>Expand the plus sign (+) next to programmability.</li>
 <li>Expand the plus sign (+) next to stored procedures.</li>
 <li>Right click on stored procedures and select new stored procedure.</li>
 </ol>
 <p>Modify the generated code with the following:</p>
 <pre><code>
-use mwd
+use HelpDesk
 -- ================================================
 -- Template generated from Template Explorer using:
 -- Create Procedure (New Menu).SQL
@@ -64,22 +64,23 @@ BEGIN
    -- interfering with SELECT statements.
    SET NOCOUNT ON;
     -- Insert statements for procedure here
-   SELECT ID, Status
+   SELECT StatusId, Status
    FROM Status
 END
 GO
 </code></pre>
 <p>As you can see from the SQL above, our stored procedure is named spHelpDeskGetStatuses and then we simply query our table, status. Before running the stored procedure on the database, save the stored procedure by selecting File:Save from the main menu and then saving your stored procedure to a location of your choice. Next, run the stored procedure by clicking Execute right below the main menu. If ran succesfully, SQL Server will report Commands executed successfully.</p>
 <p>Minimize SQL Server Management Studio for the time being.</p>
-<h3>Creating the Severity Class</h3>
+<h3>Creating the Status Class</h3>
 <p>From the task menu, restore Visual Studio. From the Solution Explorer, right click on the project and follow these steps:</p>
 <ol>
 <li>Select Add:New Item.</li>
-<li>In the add new item window, select class.</li>
-<li>In the name text field, type "Severity.cs".</li>
+<li>In the add new item window, from the left pane, choose code.</li>
+<li>From the right pane, choose Class</li>
+<li>In the name text field, type Status.cs.</li>
 <li>Click add.</li>
 </ol>
-<p>Double click Severity.cs from the Solution Explorer, which will show the empty class as shown below:</p>
+<p>Double click Status.cs from the Solution Explorer, which will show the empty class as shown below:</p>
 <pre><code>
 using System;
 using System.Collections.Generic;
@@ -87,7 +88,7 @@ using System.Linq;
 using System.Web;
 namespace HelpDesk
 {
-    public class Severity
+    public class Status
     {
     }
 }
@@ -103,22 +104,27 @@ using System.Configuration;
 using System.Data.SqlClient;
 namespace HelpDesk
 {
-    public class Severity
+    public class Status
     {
     }
 }
 </code></pre>
-<p>As you can see from the code above, we added three libraries. The first (System.Data) allows us to work with stored procedures in ADO.NET, the second (System.Configuration) allows us to reference a connection key from our configuration file, and the last (System.Data.SqlClient) allows us to connect to SQL Server.</p>
+<p>As you can see from the code above, we added three below System.Web. They are as follows:</p>
+<ol>
+<li>System.Data: allows us to work with stored procedures in ADO.NET</li>
+<li>System.Configuration: allows us to reference a connection key from our configuration file</li>
+<li>System.Data.SqlClient: allows us to connect to SQL Server</li>
+</ol>
 <h3>Creating Our Declarations</h3>
 <p>Let's first add class-level variables so that we can get or set our data. Add the following code:</p>
 <pre><code>
 namespace HelpDesk
 {
-    public class Severity
+    public class Status
     {
         #region Declarations
-        public int ID { get; set; }
-        public string severity { get; set; }
+        public int StatusId { get; set; }
+        public string Statuses { get; set; }
         #endregion
     }
 }

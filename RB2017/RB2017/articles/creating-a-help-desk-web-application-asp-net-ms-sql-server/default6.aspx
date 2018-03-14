@@ -10,8 +10,9 @@
 <ol>
 <li>Right click the project solution.</li>
 <li>Choose Add:New Item.</li>
-<li>In the Add New Item window, select Class.cs.</li>
-<li>In the name text field, type "HelpDesk" and then click Add.</li>
+<li>In the Add New Item window, from the left pane, choose Code</li>
+<li>From the right pane, choose Class</li>
+<li>In the name text field, type HelpDesk and then click Add</li>
 </ol>
 <p>Double click HelpDesk.cs from the Solution Explorer, which will show the empty class as shown below:</p>
 <pre><code>
@@ -42,8 +43,12 @@ namespace HelpDesk
     }
 }
 </code></pre>
-<p>The first library (System.Data) allows us to work with stored procedures in ADO.NET, the second (System.Configuration) allows us to reference a connection key from our configuration file and the last (System.Data.SqlClient) one allows us to connect to SQL Server.
-</p>
+<p>As you can see from the code above, we added three below System.Web. They are as follows:</p>
+<ol>
+<li>1.System.Data: allows us to work with stored procedures in ADO.NET</li>
+<li>2.System.Configuration: allows us to reference a connection key from our configuration file</li>
+<li>3.System.Data.SqlClient: allows us to connect to SQL Server</li>
+</ol>
 <h3>Creating Our Declarations</h3>
 <p>Let's first add our class-level variables so that we can get or set our data. Add the following code:</p>
 <pre><code>
@@ -52,13 +57,14 @@ namespace HelpDesk
     public class HelpDesk
     {
         #region Declarations
-        public string fname { get; set; }
-        public string lname { get; set; }
-        public string email { get; set; }
-        public int status { get; set; }
-        public string comments { get; set; }
-        public int severity { get; set; }
-        public int department { get; set; }
+        public string FName{get;set;}
+        public string LName{get;set;}
+        public string Email { get; set; }
+        public string Title{get;set;}
+        public int StatusId { get; set; }
+        public string Summary { get; set; }
+        public int SeverityId { get; set; }
+        public int DepartmentId { get; set; }
         #endregion
     }
 }
@@ -67,33 +73,36 @@ namespace HelpDesk
 <h3>Creating Our Method</h3>
 <p>In order to insert our help desk ticket, we need one method that will accept our parameters and insert the record. We do this by adding the following code:</p>
 <pre><code>
-#region Methods
+        #region Methods
         public void Save()
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["mwd"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["hd"].ConnectionString);
             SqlCommand cmd = new SqlCommand("spInsertHelpDeskTicket", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlParameter parameterFName = new SqlParameter("@FName", SqlDbType.VarChar, 50);
-            parameterFName.Value = fname;
+            parameterFName.Value = FName;
             cmd.Parameters.Add(parameterFName);
             SqlParameter parameterLName = new SqlParameter("@LName", SqlDbType.VarChar, 50);
-            parameterLName.Value = lname;
+            parameterLName.Value = LName;
             cmd.Parameters.Add(parameterLName);
             SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.VarChar, 50);
-            parameterEmail.Value = email;
+            parameterEmail.Value = Email;
             cmd.Parameters.Add(parameterEmail);
-            SqlParameter parameterSeverity = new SqlParameter("@SeverityID", SqlDbType.Int);
-            parameterSeverity.Value = severity;
-            cmd.Parameters.Add(parameterSeverity);
-            SqlParameter parameterStatus = new SqlParameter("@StatusID", SqlDbType.Int);
-            parameterStatus.Value = status;
-            cmd.Parameters.Add(parameterStatus);
-            SqlParameter parameterDepartment = new SqlParameter("@DepartmentID", SqlDbType.Int);
-            parameterDepartment.Value = department;
-            cmd.Parameters.Add(parameterDepartment);
-            SqlParameter parameterComments = new SqlParameter("@Comments", SqlDbType.VarChar, 250);
-            parameterComments.Value = comments;
-            cmd.Parameters.Add(parameterComments);
+            SqlParameter parameterTitle = new SqlParameter("@Title", SqlDbType.VarChar, 50);
+            parameterTitle.Value = Title;
+            cmd.Parameters.Add(parameterTitle);
+            SqlParameter parameterSeverityId = new SqlParameter("@SeverityID", SqlDbType.Int);
+            parameterSeverityId.Value = SeverityId;
+            cmd.Parameters.Add(parameterSeverityId);
+            SqlParameter parameterStatusId = new SqlParameter("@StatusID", SqlDbType.Int);
+            parameterStatusId.Value = StatusId;
+            cmd.Parameters.Add(parameterStatusId);
+            SqlParameter parameterDepartmentId = new SqlParameter("@DepartmentID", SqlDbType.Int);
+            parameterDepartmentId.Value = DepartmentId;
+            cmd.Parameters.Add(parameterDepartmentId);
+            SqlParameter parameterSummary = new SqlParameter("@Summary", SqlDbType.VarChar, 250);
+            parameterSummary.Value = Summary;
+            cmd.Parameters.Add(parameterSummary);
             try
             {
                 conn.Open();
@@ -126,6 +135,55 @@ namespace HelpDesk
 </ol>
 <p>If for any reason we can't open or execute our query, we wrap it inside a try/catch block and then open the connection to our database and execute the stored procedure. After the stored procedure is executed, we dispose of the command object and close our connection.
 </p>
+<h3>Create the Stored Procedure</h3>
+<p>Before we can insert a new record into our help desk table, we need to create a stored procedure that maps
+to each column name in our table. Open SQL Server Management Studio and add the following stored procedure:
+<pre><code>
+Use HelpDesk
+-- ================================================
+-- Template generated from Template Explorer using:
+-- Create Procedure (New Menu).SQL
+--
+-- Use the Specify Values for Template Parameters 
+-- command (Ctrl-Shift-M) to fill in the parameter 
+-- values below.
+--
+-- This block of comments will not be included in
+-- the definition of the procedure.
+-- ================================================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE spInsertHelpDeskTicket 
+	-- Add the parameters for the stored procedure here
+	@FName varchar(50),
+	@LName varchar(50),
+	@Email varchar(50),
+	@Title varchar(50),
+	@SeverityId int,
+	@StatusId int,
+	@DepartmentId int,
+	@Summary varchar(250)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	INSERT INTO HelpDesk (FName, LName, Title, Email, SeverityId, StatusId, DepartmentId, Summary)
+	VALUES(@FName, @LName, @Email, @Title, @SeverityId, @StatusId, @DepartmentId, @Summary)
+END
+GO
+
+</code></pre>
+</p>
 <h3>Create the Help Desk Object</h3>
 <p>From the Solution Explorer, double click default.aspx.cs and type the following method:</p>
 <pre><code>
@@ -146,18 +204,19 @@ namespace HelpDesk
 }
 </code></pre>
 <p>As you can see from the code above, we simply create a reference to the help desk object.</p>
-<h3>Creating the Submit Method</h3>
-<p>Now that we have the reference to our help desk object, let's add the following method:</p>
+<h3>Adding to the Submit Method</h3>
+<p>Now that we have the reference to our help desk object, let's add the following code:</p>
 <pre><code>
 protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            hd.fname = fnameTB.Text;
-            hd.lname = lnameTB.Text;
-            hd.email = emailTB.Text;
+            hd.FName = fnameTB.Text;
+            hd.LName = lnameTB.Text;
+            hd.Email = emailTB.Text;
+            hd.Title = titleTB.Text;
             hd.severity = Convert.ToInt32(ddlSeverity.SelectedValue);
             hd.status = Convert.ToInt32(ddlStatus.SelectedValue);
             hd.department = Convert.ToInt32(ddlDept.SelectedValue);
-            hd.comments = commentsTB.Text;
+            hd.summary = summaryTB.Text;
             hd.Save();
             phForm.Visible = false;
             phSuccess.Visible = true;

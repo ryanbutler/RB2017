@@ -1,166 +1,102 @@
-﻿<%@ Page Title="Creating an Registration and Confirmation System with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.creating_a_registration_and_confirmation_system_asp_net_ms_sql_server.default2" %>
+﻿<%@ Page Title="Creating a Application for admission and Confirmation System with ASP.NET (ASPX) and MS SQL Server" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default2.aspx.cs" Inherits="RB2017.articles.creating_a_registration_and_confirmation_system_asp_net_ms_sql_server.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <script type="text/javascript">
     $('#articles').addClass('articles');
 </script>
-<h2>Creating an Registration and Confirmation System with ASP.NET (ASPX) and MS SQL Server</h2>
-<h3>Writing the Toggle Functionality</h3>
-<p>Before you can see whether your form functions as intended, you need to write a simple toggle (show or hide) for your placeholders, reflecting whether your alumni are attending or not. Right after your submit event handler, let's write the following code:</p>
-<pre><code>
-protected void AttendingChoice()
-{
-string attending = rbAttending.SelectedValue.ToString();
-      switch (attending)
-      {
-         case "Yes":
-            phAttending.Visible = true;
-            phWhyNotAttending.Visible = false;
-            break;
-            case "No":
-            phWhyNotAttending.Visible = true;
-            phAttending.Visible = false;
-            break;
-            default:
-            phAttending.Visible = false;
-            phWhyNotAttending.Visible = false;
-            break;
-            }
- }
-</code></pre>
-<p>As you can see from the code above, you store the value the visitor selects in a string variable named attending. Then you use a switch statement on the variable to implement the following: </p>
+<h3>Relational Databases</h3>
+<p>When learning about databases, one of the toughest concepts to understand is relationships in data. In relational databases you shouldn't duplicate data, and you especially shouldn't leave your database vulnerable to scalability or maintenance issues. We get around this by relating our data to other tables. This way, we don't duplicate data and our database remains scalable, which usually alleviates the maintenance pain point.</p>
+<p>For example, think of a family tree hierarchy. Let's start with the parents:</p>
+<p class="alignCenter"><img src="images/Parents.gif" width="200" height="100" alt="Parents"></p>
+<p>The parents have children:</p>
+<p class="alignCenter"><img src="images/Parents_Children.gif" width="200" height="200" alt="Parents with Children"></p>
+<p>As you can see, the children are related to each other as brother and sister, and they are also related to each parent. So in our example, mom and dad (parents) is our parent table, while the children are our children table(s). As a result, we know these tables are related through DNA. Applying this concept to our help desk example, we can think of the help desk table as being our parent table and our additional tables as our child tables. The only difference is they are related through a primary  foreign key.</p>
+<p>By creating four additional tables we can store a reference or relationship of these records in our help desk table. By doing this, we gain the following benefits:</p>
 <ol>
-<li>If yes is selected, show attending placeholder and hide not attending</li>
-<li>If no is selected, show not attending and hide attending </li>
-<li>If neither is selected, show the attending and hide not attending</li>
+<li>Duplicate data is eliminated because help desk will hold a unique key reference (foreign key) to each status, department, severity and employee that comes from each parent table.</li>
+<li>Scalability is enabled and maintenance is reduced. If an employee or department changes, you change the details in the employee or department tables (children), and the unique reference in help desk (parent) automatically reflects that change.</li>
+<li>You enforce referential integrity of the records, ensuring that a deletion from department or employee doesn't adversely affect any records in help desk.</li>
 </ol>
-<p>A switch statement is different from if/else in terms of how it's evaluated. With the former, as soon as the switch hits the pertinent line of code, it executes what is needed and then kicks out. With the latter, regardless of what line of code it hits, it always hits the else, even if it kicks out. As a result, switch statements often lead to more efficient and readable code in some situations.</p>
-<p>In your page load event, add the following call to this method:</p>
-<pre><code>
-protected void Page_Load(object sender, EventArgs e)
-        {
-            AttendingChoice();
-        }
-</code></pre>
-<p>As you can see from the code above, you simply call the method on page load. Save your file(s) and you can now preview the page and demo the functionality. Selecting either radio button should show or hide the appropriate placeholder.</p>
-<h3>Creating and Writing Registration Class</h3>
-<p>You could very easily write the insert functionality directly inside your code behind file. However, if you ever needed to provide additional features such as update or delete functionality, writing this in the code behind file wouldn't lend itself very well to reusability. An object-oriented approach would. So, we'll create a simple class that could be reused later if needed. Follow these steps to create the registration class:
-</p>
+<p>Figure 1 offers an illustration to help visualize the relationships in the data.</p>
+<p class="alignCenter"><img src="images/relationships.png" width="723" height="461" alt="Relationships in data"/></p>
+<h3>Create a Database Diagram</h3>
+<p>In order to enforce referential integrity on our database, let's create a database diagram by following these steps:</p>
 <ol>
-<li>From the solution explorer, right click and select Add : New Item.</li>
-<li>In the add new item window, select class.</li>
-<li>In the name text field, type "Registration" and then click Add.</li>
+<li>Right click Database diagrams and select New Database Diagram as shown below: </li>
 </ol>
-<p>In order to work with a database, you need to import some namespaces in the class. At the top of the class, add the following code:</p>
-<pre><code>
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data;
-using System.Configuration;
-using System.Data.SqlClient;
-namespace Registration
-{
-    public class Registration
-    {
-    }
-}
-</code></pre>
-<p>As you can see, you added three. The first allows you to work with stored procedures in ADO.NET, the second allows you to reference a connection key from your configuration file, and the last allows you to connect to SQL Server.</p>
-<h3>Creating Your Declarations</h3>
-<p>Let's first add class-level variables so that you can get or set your data. Add the following code as shown:</p>
-<pre><code>
-namespace Registration
-{
-    public class Registration
-    {
-        #region Declaration
-        public string fname { get; set; }
-        public string lname { get; set; }
-        public string email { get; set; }
-        public bool attending { get; set;}
-        public string dinner { get; set; }
-        public string mail { get; set; }
-        public string whynotattend { get; set; }
-        public string howmanyattend { get; set; }
-        public double totalCost { get; set; }
-        #endregion
-}
-}
-</code></pre>
-<p>As you can see from the code above, you added a region that holds your class-level variables. These variables match your columns from the database table.</p>
-<h3>Creating Your Method</h3>
-<p>Due to the way your system works, your method doesn't expect any parameters except what the stored procedure needs. Your method simply needs to insert the data, which is done by adding the following code:</p>
-<pre><code>
-#region Methods
-        public void InsertRegistration()
-        {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["mwd"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("spRegistrationInsert", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlParameter parameterFName = new SqlParameter("@FName", SqlDbType.VarChar, 50);
-            SqlParameter parameterLName = new SqlParameter("@LName", SqlDbType.VarChar, 50);
-            SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.VarChar, 50);
-            SqlParameter parameterAttending = new SqlParameter("@Attending", SqlDbType.Bit);
-            SqlParameter parameterDinner = new SqlParameter("@Dinner", SqlDbType.VarChar,50);
-            SqlParameter parameterMail = new SqlParameter("@MailAddress", SqlDbType.VarChar, 100);
-            SqlParameter parameterWhyNotAttend = new SqlParameter("@WhyNotAttend", SqlDbType.VarChar, 100);
-            SqlParameter parameterHowManyAttend = new SqlParameter("@HowManyAttending", SqlDbType.VarChar, 50);
-            SqlParameter parameterTotalCost = new SqlParameter("@TotalCost", SqlDbType.Money);
-            SqlParameter parameterDate = new SqlParameter("@Date", SqlDbType.DateTime);
-            parameterFName.Value = fname;
-            parameterLName.Value = lname;
-            parameterEmail.Value = email;
-            parameterAttending.Value = attending;
-            parameterDinner.Value = dinner;
-            parameterMail.Value = mail;
-            parameterWhyNotAttend.Value = whynotattend;
-            parameterHowManyAttend.Value = howmanyattend;
-            parameterTotalCost.Value = totalCost;
-            parameterDate.Value = DateTime.Now;
-            cmd.Parameters.Add(parameterFName);
-            cmd.Parameters.Add(parameterLName);
-            cmd.Parameters.Add(parameterEmail);
-            cmd.Parameters.Add(parameterAttending);
-            cmd.Parameters.Add(parameterDinner);
-            cmd.Parameters.Add(parameterMail);
-            cmd.Parameters.Add(parameterWhyNotAttend);
-            cmd.Parameters.Add(parameterHowManyAttend);
-            cmd.Parameters.Add(parameterTotalCost);
-            cmd.Parameters.Add(parameterDate);
-            try
-            {
-                conn.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-            finally
-            {
-                cmd.Dispose();
-                conn.Close();
-            }
-        }
-               
-        #endregion
-</code></pre>
-<p>In the code above, you do the following: </p>
+<p class="alignCenter"><img src="images/NewDatabaseDiagram.jpg" width="315" height="118" alt="New Database Diagram"></p>
 <ol>
-<li>Create a connection object and pass in your configuration key.</li>
-<li>Create a command object and pass in your stored procedure and your connection object</li>
-<li>Set your command object to accept a stored procedure.</li>
-<li>Create SQL parameters to each of your database table columns, specify a parameter name and a database data type</li>
-<li>Set each parameter's value to the appropriate variable.</li>
-<li>Add each SQL parameter to the parameter's collection of your command object.</li>
+<li>In the Add table window, select appliicant and high school and click Add as shown below: </li>
 </ol>
-<p>If for any reason you can't connect to the database or execute your query, you wrap that inside a try/catch block and do the following:</p>
+<p class="alignCenter"><img src="images/add_table.png" width="469" height="368" alt="Add Tables"/></p>
+<p>Place the applicant table in the middle with high school in the top right and year intend to enroll in the top left as shown in the previous section.</p>
+<p>Next, proceed with these steps:</p>
 <ol>
-<li>Call the open method of your connection object.</li>
-<li>Call the execute non query method of your command object, which inserts the record.</li>
-<li>Catch and throw an exception if necesarry.</li>
-<li>If everything succeeds, call the dispose method of the command object, and the close method of your connection object.</li>
+<li>Left click the ID column in high school and drag it to the high school ID column in applicant. In the window that pops up, make sure your settings are as shown in Figure 2 and then click OK. </li>
 </ol>
-<p>We'll continue by writing our registration object and writing our submit functionality <a href="default3.aspx">next</a>.</p>
+<p class="alignCenter"><img src="images/foreign_key.png" width="529" height="399" alt="Foreign key constraint"/></p>
+<h3>Populating high school table</h3>
+<p>Let's proceed to populate the tables with some data by following these steps:</p>
+<ol>
+<li>Right click on high school, and select Open.</li>
+<li>Enter the following data: 
+<ul>
+<li>Hillcrest</li>
+<li>Kickapoo</li>
+<li>Central</li>
+</ul>
+</li>
+<li>Right click on year intend to enroll, and select Open.</li>
+<li>Enter the following data:
+<ul>
+<li>2018</li>
+<li>2019</li>
+<li>2020</li>
+</ul>
+</li>
+</ol>
+<p>Minimize SQL Server Management Studio; we're done with it for the time being.</p>
+<h3>Open Visual Studio and Create the Project</h3>
+<p>Open Visual Studio from the desktop: Start>Programs>Microsoft Visual Studio. From the main menu, create a new project by following these steps:</p>
+<ol>
+<li>File:New:Project</li>
+<li>In the New Project window, under the Visual C# tree, choose Web and then ASP.NET Web Application.</li>
+<li>In the name text box, name our project ApplicantAdmission.</li>
+<li>Leave Create a directory for solution checked.</li>
+<li>Click OK.</li>
+<li>In the dialog that follows, choose Web Forms, and click Ok</li>
+</ol>
+<h3>Open web.config</h3>
+<p>From the solution explorer, double click web.config and look for &lt;configuration&gt;. Inside this tag, add the following markup:</p>
+<pre><code>
+&lt;connectionStrings&gt;
+&lt;add name="aa" connectionString="Data Source=--replace with local db or remote host--;Initial Catalog=ApplicantAdmission;Integrated Security=SSPI;"/&gt;
+&lt;/connectionStrings&gt;
+</code></pre>
+<p>Simply replace the data source with either your local database server name or your remote host. When you are done, save your file.</p>
+<h3>Working with apply.aspx</h3>
+<p>In order for us to collect the information needed, we'll create a new file named apply.aspx. Follow these steps:</p>
+<ol>
+<li>From the solution explorer, right click and choose Add : New Item</li>
+<li>In the New Item Window, from the left pane, choose Web</li>
+<li>From the right pane, choose Web Form</li>
+<li>Click Add</li>
+</ol>
+<p>Add the following for initial markup:</p>
+<pre><code>
+&lt;form id="form1" name="form1" runat="server"&gt;
+&lt;asp:PlaceHolder ID="phApplication" runat="server" Visible="true"&gt;
+&lt;/asp:PlaceHolder&gt;
+&lt;asp:PlaceHolder ID="phSuccess" runat="server" Visible="false"&gt;
+&lt;div id="success"&gt;
+&lt;p&gt;Thank you for your application!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/asp:PlaceHolder&gt;
+&lt;/form&gt;
+</code></pre>
+<p>As you can see from the code above, you create three placeholder controls: </p>
+<ol>
+<li>Your initial placeholder, which contains your applicant information contents</li>
+<li>The second placeholder, which contains a success message</li>
+</ol>
+<p>We'll continue by creating the style sheet and markup for the form <a href="default3.aspx">next</a>.</p>
 </asp:Content>
